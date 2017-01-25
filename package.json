@@ -1,0 +1,34 @@
+{
+  "name": "tinyspec",
+  "version": "1.0.0",
+  "description": "Use simple and clear definitions of models and endpoints to generate full Swagger API specification",
+  "main": "index.js",
+  "dependencies": {
+    "lodash.pick": "^4.4.0",
+    "yamljs": "^0.2.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajaxy/tinyspec.git"
+  },
+  "keywords": [
+    "api",
+    "swagger",
+    "specification",
+    "rest",
+    "models",
+    "definitions",
+    "endpoints",
+    "paths"
+  ],
+  "author": "Alexander Zinchuk (alexander@zinchuk.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ajaxy/tinyspec/issues"
+  },
+  "homepage": "https://github.com/Ajaxy/tinyspec#readme"
+}
