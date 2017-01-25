@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Use simple and clear definitions of models and endpoints to generate full Swagger API specification",
   "main": "index.js",
+  "bin": {
+    "tinyspec": "./index.js"
+  },
   "dependencies": {
     "lodash.pick": "^4.4.0",
     "yamljs": "^0.2.8"
