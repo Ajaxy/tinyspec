@@ -20,13 +20,12 @@ Hospital {id:i, name, specialties, lat:i?, lng:i?}
 
 ## Sample `endpoints.tinyspec`
 ```javascript
-Public endpoints:
-    POST /auth/sign_up {user:User}
-        => {success:b}
-    GET /auth/verify_email?email
-        => {success:b}
-    PUT /auth/email?email&code
-        => {token:s}
+POST /auth/sign_up {user:User}
+    => {success:b}
+GET /auth/verify_email?email
+    => {success:b}
+PUT /auth/email?email&code
+    => {token:s}
 
 Client endpoints:
     @token GET /account
@@ -35,12 +34,16 @@ Client endpoints:
         => Organization[]
     @token GET /organizations/:id/ems_agencies
         => EmsAgency[]
-    @apikey POST /organizations {organization:Organization}
-        => {success:b}
     @token GET /hospitals?radius:?&location:?
         => Hospital[]
     @token GET /hospitals/:id
         => Hospital
+
+Server endpoints:
+    @apikey POST /organizations {organization:Organization}
+        => {success:b}
+    @apikey DELETE /organizations
+        => {success:b}
 ```
 
 ## Sample `header.yml`
