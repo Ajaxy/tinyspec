@@ -31,19 +31,14 @@ Public endpoints:
 Client endpoints:
     @token GET /account
         => {user:User}
-
     @token GET /organizations
         => Organization[]
-
     @token GET /organizations/:id/ems_agencies
         => EmsAgency[]
-
     @apikey POST /organizations {organization:Organization}
         => {success:b}
-
     @token GET /hospitals?radius:?&location:?
         => Hospital[]
-
     @token GET /hospitals/:id
         => Hospital
 ```
