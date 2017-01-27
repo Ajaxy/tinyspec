@@ -1,5 +1,6 @@
 # tinyspec
-Use simple and clear definitions of models and endpoints to generate full Swagger API specification. With token authentication support.
+Use simple and clear definitions of models and endpoints to generate full Swagger API specification.
+With authentication methods support.
 
 ## Instalation
 `npm i -g tinyspec`
@@ -19,29 +20,32 @@ Hospital {id:i, name, specialties, lat:i?, lng:i?}
 
 ## Sample `endpoints.tinyspec`
 ```javascript
-public POST /auth/sign_up {user:User}
-    => {success:b}
+Public endpoints:
+    POST /auth/sign_up {user:User}
+        => {success:b}
+    GET /auth/verify_email?email
+        => {success:b}
+    PUT /auth/email?email&code
+        => {token:s}
 
-public GET /auth/verify_email?email
-    => {success:b}
+Client endpoints:
+    @token GET /account
+        => {user:User}
 
-public PUT /auth/email?email&code
-    => {token:s}
+    @token GET /organizations
+        => Organization[]
 
-GET /account
-    => {user:User}
+    @token GET /organizations/:id/ems_agencies
+        => EmsAgency[]
 
-GET /organizations
-    => Organization[]
+    @apikey POST /organizations {organization:Organization}
+        => {success:b}
 
-GET /organizations/:id/ems_agencies
-    => EmsAgency[]
+    @token GET /hospitals?radius:?&location:?
+        => Hospital[]
 
-GET /hospitals?radius:?&location:?
-    => Hospital[]
-
-GET /hospitals/:id
-    => Hospital
+    @token GET /hospitals/:id
+        => Hospital
 ```
 
 ## Sample `header.yml`
@@ -56,6 +60,10 @@ schemes:
 produces:
   - application/json
 securityDefinitions:
+  authkey:
+    name: authkey
+    type: apiKey
+    in: query
   token:
     name: Authorization
     type: apiKey
