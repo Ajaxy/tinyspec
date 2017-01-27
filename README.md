@@ -6,7 +6,7 @@ Use simple and clear definitions of models and endpoints to generate full Swagge
 
 ## Usage
 1. Create `header.yml`, `models.tinyspec` and `endpoints.tinyspec` files.
-2. Execute `tinyspec .`
+2. Execute `tinyspec`
 3. Check out generated `swagger.yml`.
 
 ## Sample `models.tinyspec`
@@ -35,20 +35,20 @@ GET /account
 
 GET /organizations
     => Organization[]
-GET /organizations/{id}/ems_agencies
+GET /organizations/:id/ems_agencies
     => EmsAgency[]
 GET /hospitals?radius:?&location:?
     => Hospital[]
-GET /hospitals/{id}
+GET /hospitals/:id
     => Hospital
 
 POST /calls {call:Call}
     => {id:s}
-PUT /calls/{id}/cancel
+PUT /calls/:id/cancel
     => {success:b}
-GET /calls/{id}/events
+GET /calls/:id/events
     => CallEvent[]
-GET /calls/{id}/asset_update
+GET /calls/:id/asset_update
     => AssetUpdate
 ```
 
