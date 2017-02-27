@@ -9,7 +9,7 @@ And it also includes [bootprint-openapi](bootprint/bootprint-openapi) to produce
 ## Fast start
 Tinyspec syntax is designed to be intuitive, so you can simply refer to an example to start writing your first tinyspec.
 
-1. Create `[models.tinyspec](Ajaxy/tinyspec/example/models.tinyspec)`, `[endpoints.tinyspec](Ajaxy/tinyspec/example/models.endpoints)` and `[header.yaml](Ajaxy/tinyspec/example/models.yaml)` files.
+1. Create [`models.tinyspec`](example/models.tinyspec), [`endpoints.tinyspec`](example/endpoints.tinyspec) and [`header.yaml`](example/header.yaml) files.
 2. Run `tinyspec -h` in the same directory.
 3. Check out generated `html/index.html` — [demo here](https://ajaxy.github.io/tinyspec).
 
@@ -22,3 +22,6 @@ Options:
     --json | -j     Generate OpenAPI/Swagger JSON
     --html | -h     Generate HTML/CSS document
 ```
+
+## Contribution
+If you have an idea about how to make the things better, feel free to create issue and/or pull request.
