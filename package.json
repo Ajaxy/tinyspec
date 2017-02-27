@@ -1,6 +1,6 @@
 {
   "name": "tinyspec",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Use simple and clear definitions of models and endpoints to generate full Swagger API specification",
   "main": "index.js",
   "bin": {
