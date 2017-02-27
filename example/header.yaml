@@ -1,0 +1,27 @@
+swagger: '2.0'
+info:
+  title: Tinyspec API Example
+  description: |-
+    #### HTTP REST JSON API
+    https://demo.tinyspec.com
+
+    The API is used by **mobile** and **desktop** clients to demonstrate the syntax of `tinyspec`.
+  version: '2.0.0'
+host: demo.tinyspec.com
+basePath: /
+schemes:
+  - https
+consumes:
+  - application/x-www-form-urlencoded
+produces:
+  - application/json
+securityDefinitions:
+  token:
+    name: Authorization
+    type: apiKey
+    in: header
+  apikey:
+    name: apiKey
+    type: apiKey
+    in: query
+
