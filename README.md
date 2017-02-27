@@ -15,12 +15,13 @@ Tinyspec syntax is designed to be intuitive, so you can simply refer to an examp
 
 ## Usage
 ```bash
-tinyspec [options]
+tinyspec [option]
 
 Options:
     --yaml | -y     Generate OpenAPI/Swagger YAML (default)
     --json | -j     Generate OpenAPI/Swagger JSON
     --html | -h     Generate HTML/CSS document
+    --help          Display this help
 ```
 
 ## Contribution

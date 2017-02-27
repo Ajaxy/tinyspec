@@ -13,9 +13,11 @@ var TARGET_HTML_DIR = './html';
 var args = process.argv.slice(2);
 var srcDir = process.cwd();
 
-var mode = 'yaml';
+var mode = 'help';
 
-if (args.indexOf('--json') != -1 || args.indexOf('-j') != -1) {
+if (args.indexOf('--yaml') != -1 || args.indexOf('-y') != -1) {
+    mode = 'yaml'
+} else if (args.indexOf('--json') != -1 || args.indexOf('-j') != -1) {
     mode = 'json'
 } else if (args.indexOf('--html') != -1 || args.indexOf('-h') != -1) {
     mode = 'html'
@@ -28,6 +30,19 @@ var yamlSpec = [
 ].join('');
 
 switch (mode) {
+    case 'help':
+        console.log(
+`Usage:
+tinyspec [option]
+
+Options:
+    --yaml | -y     Generate OpenAPI/Swagger YAML (default)
+    --json | -j     Generate OpenAPI/Swagger JSON
+    --html | -h     Generate HTML/CSS document
+    --help          Display this help
+`
+        );
+        break;
     case 'yaml':
         fs.writeFileSync(path.join(srcDir, TARGET_YAML_FILE), yamlSpec);
         break;
