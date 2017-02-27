@@ -1,7 +1,7 @@
 {
   "name": "tinyspec",
   "version": "1.2.0",
-  "description": "Use simple and clear definitions of models and endpoints to generate full HTML/OpenAPI/Swagger specification",
+  "description": "Simple syntax for descibing REST APIs",
   "main": "index.js",
   "bin": {
     "tinyspec": "./index.js"
