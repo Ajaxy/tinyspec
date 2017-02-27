@@ -25,4 +25,4 @@ Options:
 ```
 
 ## Contribution
-If you have an idea about how to make the things better, feel free to create issue and/or pull request.
+If you have an idea about how to make things better, feel free to create issue and/or pull request.
