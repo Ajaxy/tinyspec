@@ -11,7 +11,7 @@ Tinyspec syntax is designed to be intuitive, so you can simply refer to an examp
 
 1. Create [`models.tinyspec`](example/models.tinyspec), [`endpoints.tinyspec`](example/endpoints.tinyspec) and [`header.yaml`](example/header.yaml) files.
 2. Run `tinyspec -h` in the same directory.
-3. Check out generated `html/index.html` — [demo here](https://ajaxy.github.io/tinyspec).
+3. Check out generated `html/index.html` — [demo here](https://ajaxy.github.io/tinyspec/html).
 
 ## Usage
 ```bash
