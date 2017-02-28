@@ -1,7 +1,7 @@
 # tinyspec
 It's quite important to quickly create and keep consistent your JSON API documentation. With `tinyspec` you can do it fast and fancy.
 `tinyspec` suggests a compact and clear format of describing your models and routes (endpoints) that is compatible with much more verbose OpenAPI/Swagger format.
-And it also includes [bootprint-openapi](bootprint/bootprint-openapi) to produce wonderful HTML specification.
+And it also includes [bootprint-openapi](https://github.com/bootprint/bootprint-openapi) to produce wonderful HTML specification.
 
 ## Instalation
 `npm i -g tinyspec`
