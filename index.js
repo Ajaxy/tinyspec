@@ -10,7 +10,7 @@ const transformModels = require('./lib/transformModels');
 
 const TARGET_YAML_FILE = 'swagger.yaml';
 const TARGET_JSON_FILE = 'swagger.json';
-const TARGET_HTML_DIR = './html';
+const TARGET_HTML_DIR = './docs';
 
 const args = process.argv.slice(2);
 const srcDir = process.cwd();
