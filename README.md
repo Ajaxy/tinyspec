@@ -3,7 +3,7 @@ It's quite important to quickly create and keep consistent your JSON API documen
 `tinyspec` suggests a compact and clear format of describing your models and routes (endpoints) that is compatible with much more verbose OpenAPI/Swagger format.
 And it also includes [bootprint-openapi](https://github.com/bootprint/bootprint-openapi) to produce wonderful HTML specification.
 
-## Instalation
+## Global instalation
 `npm i -g tinyspec`
 
 ## Fast start
@@ -23,6 +23,20 @@ Options:
     --html | -h     Generate HTML/CSS document
     --help          Display this help
 ```
+
+## Usage in existing project with support of GH Pages
+Install tinyspec locally: `npm i --save-dev tinyspec`
+
+Add npm scripts to `package json` to generate `./docs` folder from `./spec` folder:
+```js
+  "scripts": {
+    "docs": "cd spec && tinyspec -h && mv docs ../",
+    ...
+  }
+```
+Use as `npm run docs` and check out your GH pages web site.
+Read more: https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/
+
 
 ## Contribution
 If you have an idea about how to make things better, feel free to create issue and/or pull request.
