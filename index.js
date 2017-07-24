@@ -62,7 +62,7 @@ function generateYaml() {
         fs.readFileSync(path.join(srcDir, 'header.yaml'), 'utf-8'),
         transformEndpoints(fs.readFileSync(path.join(srcDir, 'endpoints.tinyspec'), 'utf-8')),
         transformModels(fs.readFileSync(path.join(srcDir, 'models.tinyspec'), 'utf-8'))
-    ].join('');
+    ].join('\n');
 }
 
 function generateJson(yamlSpec) {
@@ -75,6 +75,11 @@ function generateJson(yamlSpec) {
 function generateHtml(json, target) {
     return bootprint
         .load(bootprintOpenapi)
+        .merge({
+            handlebars: {
+                partials: path.join(__dirname, './bootprint_partials')
+            }
+        })
         .build(json, target)
         .generate()
         .then(console.log);
