@@ -8,20 +8,21 @@ const bootprintOpenapi = require('bootprint-openapi');
 const transformEndpoints = require('./lib/transformEndpoints');
 const transformModels = require('./lib/transformModels');
 
+const argv = require('yargs').argv;
+
 const TARGET_YAML_FILE = 'swagger.yaml';
 const TARGET_JSON_FILE = 'swagger.json';
 const TARGET_HTML_DIR = './docs';
 
-const args = process.argv.slice(2);
 const srcDir = process.cwd();
 
-var mode = 'help';
+let mode = 'help';
 
-if (args.indexOf('--yaml') != -1 || args.indexOf('-y') != -1) {
+if (argv.yaml || argv.y) {
     mode = 'yaml'
-} else if (args.indexOf('--json') != -1 || args.indexOf('-j') != -1) {
+} else if (argv.json || argv.j) {
     mode = 'json'
-} else if (args.indexOf('--html') != -1 || args.indexOf('-h') != -1) {
+} else if (argv.html || argv.h) {
     mode = 'html'
 }
 
@@ -35,6 +36,7 @@ Options:
     --yaml | -y     Generate OpenAPI/Swagger YAML (default)
     --json | -j     Generate OpenAPI/Swagger JSON
     --html | -h     Generate HTML/CSS document
+    --no-default-attrs     Do not add \`id\`, \`created_at\` and \`updated_at\` to all models
     --help          Display this help
 `
         );

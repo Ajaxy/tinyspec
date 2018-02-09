@@ -21,6 +21,7 @@ Options:
     --yaml | -y     Generate OpenAPI/Swagger YAML (default)
     --json | -j     Generate OpenAPI/Swagger JSON
     --html | -h     Generate HTML/CSS document
+    --no-default-attrs     Do not add `id`, `created_at` and `updated_at` to all models
     --help          Display this help
 ```
 
