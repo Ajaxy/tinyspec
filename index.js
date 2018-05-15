@@ -21,11 +21,11 @@ const outputDir = argv.output || argv.o || '.';
 let mode = 'help';
 
 if (argv.yaml || argv.y) {
-    mode = 'yaml'
+    mode = 'yaml';
 } else if (argv.json || argv.j) {
-    mode = 'json'
+    mode = 'json';
 } else if (argv.html || argv.h) {
-    mode = 'html'
+    mode = 'html';
 }
 
 switch (mode) {
@@ -67,7 +67,7 @@ Options:
 
 function generateYaml() {
     const pattern = path.join(srcDir, '**', '@(*models.tinyspec|*endpoints.tinyspec|header.yaml)');
-    const filePaths = glob.sync(pattern);
+    const filePaths = glob.sync(pattern, { ignore: '**/node_modules' });
     const byType = _.groupBy(filePaths, (filePath) => filePath.match(/\w+\.\w+$/)[0]);
     const header = fs.readFileSync(byType['header.yaml'][0], 'utf-8');
     const models = byType['models.tinyspec'].map((filePath) => fs.readFileSync(filePath)).join('\n\n');
