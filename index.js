@@ -67,7 +67,7 @@ Options:
 
 function generateYaml() {
     const pattern = path.join(srcDir, '**', '@(*models.tinyspec|*endpoints.tinyspec|header.yaml)');
-    const filePaths = glob.sync(pattern, { ignore: path.join(srcDir, '**/node_modules') });
+    const filePaths = glob.sync(pattern, { ignore: path.join(srcDir, '**/node_modules/**') });
     const byType = _.groupBy(filePaths, (filePath) => filePath.match(/\w+\.\w+$/)[0]);
     const header = fs.readFileSync(byType['header.yaml'][0], 'utf-8');
     const models = byType['models.tinyspec'].map((filePath) => fs.readFileSync(filePath)).join('\n\n');
