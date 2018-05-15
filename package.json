@@ -9,6 +9,7 @@
   "dependencies": {
     "bootprint": "^1.0.0",
     "bootprint-openapi": "^1.0.1",
+    "glob": "^7.1.2",
     "lodash": "^4.17.4",
     "lodash-inflection": "^1.5.0",
     "yamljs": "^0.2.8",
