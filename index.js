@@ -39,7 +39,7 @@ Options:
     --json | -j     Generate OpenAPI/Swagger JSON
     --html | -h     Generate HTML/CSS document
     --output | -o    Path to output generated files
-    --no-default-attrs     Do not add \`id\`, \`created_at\` and \`updated_at\` to all models
+    --add-default-attrs     Add \`id\`, \`created_at\` and \`updated_at\` to all models
     --add-nulls     Include \`null\` as possible value for non-required fields
     --help          Display this help
 `
