@@ -66,16 +66,14 @@ Options:
 }
 
 function generateYaml() {
-    const pattern = path.join(srcDir, '**', '@(models.tinyspec|endpoints.tinyspec|header.yaml)');
+    const pattern = path.join(srcDir, '**', '@(*models.tinyspec|*endpoints.tinyspec|header.yaml)');
     const filePaths = glob.sync(pattern);
-    const fileNames = filePaths.map((filePath) => path.basename(filePath));
-    const byNames = _.zipObject(fileNames, filePaths);
+    const byType = _.groupBy(filePaths, (filePath) => filePath.match(/\w+\.\w+$/)[0]);
+    const header = fs.readFileSync(byType['header.yaml'][0], 'utf-8');
+    const models = byType['models.tinyspec'].map((filePath) => fs.readFileSync(filePath)).join('\n\n');
+    const endpoints = byType['endpoints.tinyspec'].map((filePath) => fs.readFileSync(filePath)).join('\n\n');
 
-    return [
-        fs.readFileSync(byNames['header.yaml'], 'utf-8'),
-        transformEndpoints(fs.readFileSync(byNames['endpoints.tinyspec'], 'utf-8')),
-        transformModels(fs.readFileSync(byNames['models.tinyspec'], 'utf-8'))
-    ].join('\n');
+    return [header, transformEndpoints(endpoints), transformModels(models)].join('\n');
 }
 
 function generateJson(yamlSpec, target) {
