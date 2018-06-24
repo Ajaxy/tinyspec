@@ -92,7 +92,7 @@ Endpoints (_paths_) are described in `endpoints.tinyspec` files. As with object 
 
 The basic endpoint description looks like this:
 ```
-POST /resources  {key: Model}
+POST /resources {key: Model}
     => {success: b, error: b}
 GET /resources
     => {key: Model[]}
@@ -100,14 +100,18 @@ GET /resources
 
 You can expand it in the following ways:
 
-#### Query Parameters
-To specify query parameters, add the question mark (`?`) after the path and list the query parameters. 
+#### Parameters and Responses
+Request _body parameters_ are specified using `{...}` right after the resource name (see example above).
+
+To specify _query parameters_, add the question mark (`?`) after the path and list the query parameters. 
 You can add multiple parameters by connecting them with the ampersand symbol (`&`).
 
-Query parameter description format is the same as for objects. For example, you can make some parameters optional or specify the required data type:
+_Responses_ are specified below the endpoint definitions prefixed with an indent and `=>` sign.
+
+Parameters and responses description format is the same as for objects. For example, you can make some parameters optional or specify the required data type:
 ```
 GET /examples?sort&limit?:i
-    => {examples: Example[]}
+    => {examples: Example[], totalCount?: i}
 ```
 
 #### Endpoints Description
@@ -117,7 +121,6 @@ To create a description for the endpoint, add a `//` comment before its specific
 GET /examples
     => {examples: Example[]}
 ```
-
 
 #### Automatic Generation of Basic Methods
 You can quickly create CRUDL actions (_create_, _retrieve_, _update_, _delete_, _list_) for a specified resources by using a dollar sign (`$`) followed by actions abbreviation (i.e. `$CRUDL`) in place of the request method. For example:
