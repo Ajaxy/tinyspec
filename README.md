@@ -3,7 +3,7 @@
 
 - [About](#about)  
 - [Installing](#installing)  
-- [Quick Start](#quick-start)  
+- [Quick Start and Demo](#quick-start-and-demo)  
 - [Tinyspec Syntax](#tinyspec-syntax)  
     - [Object Models Definition](#object-models-definition)  
     - [Endpoints Definition](#endpoints-paths-definition)  
@@ -26,14 +26,13 @@ To use `tinyspec`, install it globally. Use [npm](https://www.npmjs.com/) for it
 npm install -g tinyspec
 ```
 
-## Quick Start
+## Quick Start and Demo
 To generate the API documentation, follow these steps:
 
 1. Create [`models.tinyspec`](examples/models.tinyspec), [`endpoints.tinyspec`](examples/endpoints.tinyspec) and [`header.yaml`](examples/header.yaml) files. You can find more information on how to write these files yourself below.
-2. Execute the `tinyspec -h` command in the same directory.
+2. Run `tinyspec -h`.
 
-You documentation is generated! It is available in the `docs` folder.    
-Check out the  [demo](https://ajaxy.github.io/tinyspec/html) to see how the generated documentation looks like.
+You documentation is generated! Check out this [**DEMO**](https://ajaxy.github.io/tinyspec) to see how it may look like.
 
 ## Tinyspec Syntax
 Tinyspec definition is split into 3 different sections. You specify objects and endpoints that the API uses in the special tinyspec format and place any extra information in the `header.yaml` file.
@@ -128,23 +127,23 @@ $CRUDL /examples
 ```
 This tiny piece would be an equivalent to:
 ```
-// **List** available [`Example`](#/definitions/Example) _records_
+// **List** available _examples_
 GET /examples
     => {examples: Example[]}
 
-// **Create** new [`Example`](#/definitions/Example)
+// **Create** new _example_
 POST /examples {example: ExampleNew}
     => {success: b, id: i}
 
-// **Retrieve** particular [`Example`](#/definitions/Example)
+// **Retrieve** particular _example_
 GET /examples/:id
     => {example: Example}
 
-// **Update** particular [`Example`](#/definitions/Example)
+// **Update** particular _example_
 PATCH /examples/:id {example: ExampleUpdate}
     => {success: b}
 
-// **Delete** particular [`Example`](#/definitions/Example)
+// **Delete** particular _example_
 DELETE /examples/:id
     => {success: b}
 ```
@@ -216,12 +215,13 @@ To generate the documentation for GitHub pages from the existing project:
     "docs": "tinyspec -h -o ../docs/"
   }
 ```
-* Execute the `npm run docs` command and check out your GitHub static website.
+* Execute the `npm run docs` command, commits and push changes and check out your GitHub static website.
 
 For more information about GitHub Pages, [see this article](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/).
 
 ### Using With Asciidoctor
 Check out [this repo](https://github.com/Ajaxy/openapi-asciidoctor) to produce even more beautiful HTML (and PDF) output.
+
 
 ## Contributing
 Contributions and feedback are always welcome. If you have an idea on how to make tinyspec better, feel free to create an issue and/or pull request.
