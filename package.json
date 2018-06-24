@@ -7,15 +7,16 @@
     "tinyspec": "./index.js"
   },
   "dependencies": {
-    "bootprint": "^1.0.0",
-    "bootprint-openapi": "^1.0.1",
     "glob": "^7.1.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.10",
     "lodash-inflection": "^1.5.0",
     "yamljs": "^0.2.8",
     "yargs": "^11.0.0"
   },
-  "devDependencies": {},
+  "peerDependencies": {
+    "bootprint": "^1.0.2",
+    "bootprint-openapi": "^1.1.0"
+  },
   "scripts": {
     "example:docs": "tinyspec -h -o docs/"
   },

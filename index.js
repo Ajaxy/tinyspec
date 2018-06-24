@@ -5,8 +5,16 @@ const path = require('path');
 const glob = require('glob');
 const _ = require('lodash');
 const YAML = require('yamljs');
-const bootprint = require('bootprint');
-const bootprintOpenapi = require('bootprint-openapi');
+
+let bootprint;
+let bootprintOpenapi;
+
+try {
+    bootprint = require('bootprint');
+    bootprintOpenapi = require('bootprint-openapi');
+} catch (err) {
+}
+
 const transformEndpoints = require('./lib/transformEndpoints');
 const transformModels = require('./lib/transformModels');
 
@@ -52,6 +60,14 @@ Options:
         generateJson(generateYaml(), path.join(srcDir, outputDir, TARGET_JSON_FILE));
         break;
     case 'html':
+        if (!bootprint || !bootprintOpenapi) {
+            const { peerDependencies } = require('./package');
+            const installCommand = _.map(peerDependencies, (v, k) => `${k}@${v}`).join(' ');
+
+            console.error(`Please, install peer dependencies first: \`npm install ${installCommand}\``);
+            process.exit(1);
+        }
+
         const jsonFilePath = path.join(srcDir, TARGET_JSON_FILE);
         const needCleanup = !fs.existsSync(jsonFilePath);
 
