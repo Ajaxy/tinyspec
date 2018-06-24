@@ -1,12 +1,13 @@
-Guest endpoints:
-    $L /colors
+General endpoints:
     $L /users
 
 Admin endpoints:
     // **List and filter** _extended colors_
-    @token GET /colors (admin)?filter?&page?:i
+    @token GET /colors?filter&page:i
         => {colors: ColorExtended[], totalCount: i}
 
     @token $CRUD /colors
     @token $CRUD /users
 
+Guest endpoints:
+    $L /colors (guest)

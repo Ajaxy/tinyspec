@@ -448,23 +448,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_paths">Resources</a>
 <ul class="sectlevel2">
-<li><a href="#_guest_endpoints_resource">Guest Endpoints</a>
+<li><a href="#_general_endpoints_resource">General Endpoints</a>
 <ul class="sectlevel3">
-<li><a href="#_get-colors"><strong>List</strong> available <em>colors</em></a></li>
 <li><a href="#_get-users"><strong>List</strong> available <em>users</em></a></li>
 </ul>
 </li>
 <li><a href="#_admin_endpoints_resource">Admin Endpoints</a>
 <ul class="sectlevel3">
-<li><a href="#_post-colors"><strong>Create</strong> new <em>color</em></a></li>
 <li><a href="#_post-users"><strong>Create</strong> new <em>user</em></a></li>
-<li><a href="#_get-colors-admin"><strong>List and filter</strong> <em>extended colors</em></a></li>
+<li><a href="#_get-colors"><strong>List and filter</strong> <em>extended colors</em></a></li>
+<li><a href="#_post-colors"><strong>Create</strong> new <em>color</em></a></li>
 <li><a href="#_get-colors-id"><strong>Retrieve</strong> particular <em>color</em></a></li>
 <li><a href="#_delete-colors-id"><strong>Delete</strong> particular <em>color</em></a></li>
 <li><a href="#_patch-colors-id"><strong>Update</strong> particular <em>color</em></a></li>
 <li><a href="#_get-users-id"><strong>Retrieve</strong> particular <em>user</em></a></li>
 <li><a href="#_delete-users-id"><strong>Delete</strong> particular <em>user</em></a></li>
 <li><a href="#_patch-users-id"><strong>Update</strong> particular <em>user</em></a></li>
+</ul>
+</li>
+<li><a href="#_guest_endpoints_resource">Guest Endpoints</a>
+<ul class="sectlevel3">
+<li><a href="#_get-colors-guest"><strong>List</strong> available <em>colors</em></a></li>
 </ul>
 </li>
 </ul>
@@ -520,10 +524,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>Guest endpoints</p>
+<p>General endpoints</p>
 </li>
 <li>
 <p>Admin endpoints</p>
+</li>
+<li>
+<p>Guest endpoints</p>
 </li>
 </ul>
 </div>
@@ -554,64 +561,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_paths"><a class="anchor" href="#_paths"></a>Resources</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_guest_endpoints_resource"><a class="anchor" href="#_guest_endpoints_resource"></a>Guest Endpoints</h3>
-<div class="sect3">
-<h4 id="_get-colors"><a class="anchor" href="#_get-colors"></a><strong>List</strong> available <em>colors</em></h4>
-<div class="literalblock">
-<div class="content">
-<pre>GET /colors</pre>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_description"><a class="anchor" href="#_description"></a>Description</h5>
-<div class="paragraph">
-<p><strong>List</strong> available <em>colors</em></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_responses"><a class="anchor" href="#_responses"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-middle">HTTP Code</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>200</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_get-colors_response_200">Response 200</a></p></td>
-</tr>
-</tbody>
-</table>
-<div id="_get-colors_response_200" class="paragraph">
-<p><strong>Response 200</strong></p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 42.8571%;">
-<col style="width: 57.1429%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>colors</strong><br>
-<em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">&lt; <a href="#_color">Color</a> &gt; array</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<h3 id="_general_endpoints_resource"><a class="anchor" href="#_general_endpoints_resource"></a>General Endpoints</h3>
 <div class="sect3">
 <h4 id="_get-users"><a class="anchor" href="#_get-users"></a><strong>List</strong> available <em>users</em></h4>
 <div class="literalblock">
@@ -620,13 +570,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_2"><a class="anchor" href="#_description_2"></a>Description</h5>
+<h5 id="_description"><a class="anchor" href="#_description"></a>Description</h5>
 <div class="paragraph">
 <p><strong>List</strong> available <em>users</em></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_responses_2"><a class="anchor" href="#_responses_2"></a>Responses</h5>
+<h5 id="_responses"><a class="anchor" href="#_responses"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -673,16 +623,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_admin_endpoints_resource"><a class="anchor" href="#_admin_endpoints_resource"></a>Admin Endpoints</h3>
 <div class="sect3">
-<h4 id="_post-colors"><a class="anchor" href="#_post-colors"></a><strong>Create</strong> new <em>color</em></h4>
+<h4 id="_post-users"><a class="anchor" href="#_post-users"></a><strong>Create</strong> new <em>user</em></h4>
 <div class="literalblock">
 <div class="content">
-<pre>POST /colors</pre>
+<pre>POST /users</pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_3"><a class="anchor" href="#_description_3"></a>Description</h5>
+<h5 id="_description_2"><a class="anchor" href="#_description_2"></a>Description</h5>
 <div class="paragraph">
-<p><strong>Create</strong> new <em>color</em></p>
+<p><strong>Create</strong> new <em>user</em></p>
 </div>
 </div>
 <div class="sect4">
@@ -705,11 +655,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Body</strong></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>body</strong><br>
 <em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_post-colors_body">body</a></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_post-users_body">body</a></p></td>
 </tr>
 </tbody>
 </table>
-<div id="_post-colors_body" class="paragraph">
+<div id="_post-users_body" class="paragraph">
 <p><strong>body</strong></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -725,15 +675,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>color</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>user</strong><br>
 <em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_colornew">ColorNew</a></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_usernew">UserNew</a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_responses_3"><a class="anchor" href="#_responses_3"></a>Responses</h5>
+<h5 id="_responses_2"><a class="anchor" href="#_responses_2"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -748,11 +698,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>200</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_post-colors_response_200">Response 200</a></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_post-users_response_200">Response 200</a></p></td>
 </tr>
 </tbody>
 </table>
-<div id="_post-colors_response_200" class="paragraph">
+<div id="_post-users_response_200" class="paragraph">
 <p><strong>Response 200</strong></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -803,16 +753,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post-users"><a class="anchor" href="#_post-users"></a><strong>Create</strong> new <em>user</em></h4>
+<h4 id="_get-colors"><a class="anchor" href="#_get-colors"></a><strong>List and filter</strong> <em>extended colors</em></h4>
 <div class="literalblock">
 <div class="content">
-<pre>POST /users</pre>
+<pre>GET /colors</pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_4"><a class="anchor" href="#_description_4"></a>Description</h5>
+<h5 id="_description_3"><a class="anchor" href="#_description_3"></a>Description</h5>
 <div class="paragraph">
-<p><strong>Create</strong> new <em>user</em></p>
+<p><strong>List and filter</strong> <em>extended colors</em></p>
 </div>
 </div>
 <div class="sect4">
@@ -832,38 +782,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Body</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>body</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Query</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>filter</strong><br>
 <em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_post-users_body">body</a></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 </tr>
-</tbody>
-</table>
-<div id="_post-users_body" class="paragraph">
-<p><strong>body</strong></p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 42.8571%;">
-<col style="width: 57.1429%;">
-</colgroup>
-<thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>user</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Query</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>page</strong><br>
 <em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_usernew">UserNew</a></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_responses_4"><a class="anchor" href="#_responses_4"></a>Responses</h5>
+<h5 id="_responses_3"><a class="anchor" href="#_responses_3"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -878,11 +812,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>200</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_post-users_response_200">Response 200</a></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_get-colors_response_200">Response 200</a></p></td>
 </tr>
 </tbody>
 </table>
-<div id="_post-users_response_200" class="paragraph">
+<div id="_get-colors_response_200" class="paragraph">
 <p><strong>Response 200</strong></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -898,12 +832,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>success</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>colors</strong><br>
 <em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&lt; <a href="#_colorextended">ColorExtended</a> &gt; array</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>id</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>totalCount</strong><br>
 <em>required</em></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
 </tr>
@@ -933,16 +867,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="_get-colors-admin"><a class="anchor" href="#_get-colors-admin"></a><strong>List and filter</strong> <em>extended colors</em></h4>
+<h4 id="_post-colors"><a class="anchor" href="#_post-colors"></a><strong>Create</strong> new <em>color</em></h4>
 <div class="literalblock">
 <div class="content">
-<pre>GET /colors (admin)</pre>
+<pre>POST /colors</pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_5"><a class="anchor" href="#_description_5"></a>Description</h5>
+<h5 id="_description_4"><a class="anchor" href="#_description_4"></a>Description</h5>
 <div class="paragraph">
-<p><strong>List and filter</strong> <em>extended colors</em></p>
+<p><strong>Create</strong> new <em>color</em></p>
 </div>
 </div>
 <div class="sect4">
@@ -962,22 +896,38 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Query</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>filter</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Body</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>body</strong><br>
+<em>required</em></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_post-colors_body">body</a></p></td>
 </tr>
+</tbody>
+</table>
+<div id="_post-colors_body" class="paragraph">
+<p><strong>body</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 42.8571%;">
+<col style="width: 57.1429%;">
+</colgroup>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Query</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>page</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<th class="tableblock halign-left valign-middle">Name</th>
+<th class="tableblock halign-left valign-middle">Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>color</strong><br>
+<em>required</em></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_colornew">ColorNew</a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_responses_5"><a class="anchor" href="#_responses_5"></a>Responses</h5>
+<h5 id="_responses_4"><a class="anchor" href="#_responses_4"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -992,11 +942,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>200</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_get-colors-admin_response_200">Response 200</a></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_post-colors_response_200">Response 200</a></p></td>
 </tr>
 </tbody>
 </table>
-<div id="_get-colors-admin_response_200" class="paragraph">
+<div id="_post-colors_response_200" class="paragraph">
 <p><strong>Response 200</strong></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1012,12 +962,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>colors</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>success</strong><br>
 <em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">&lt; <a href="#_colorextended">ColorExtended</a> &gt; array</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>totalCount</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>id</strong><br>
 <em>required</em></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
 </tr>
@@ -1054,7 +1004,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_6"><a class="anchor" href="#_description_6"></a>Description</h5>
+<h5 id="_description_5"><a class="anchor" href="#_description_5"></a>Description</h5>
 <div class="paragraph">
 <p><strong>Retrieve</strong> particular <em>color</em></p>
 </div>
@@ -1085,7 +1035,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect4">
-<h5 id="_responses_6"><a class="anchor" href="#_responses_6"></a>Responses</h5>
+<h5 id="_responses_5"><a class="anchor" href="#_responses_5"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1157,7 +1107,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_7"><a class="anchor" href="#_description_7"></a>Description</h5>
+<h5 id="_description_6"><a class="anchor" href="#_description_6"></a>Description</h5>
 <div class="paragraph">
 <p><strong>Delete</strong> particular <em>color</em></p>
 </div>
@@ -1188,7 +1138,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect4">
-<h5 id="_responses_7"><a class="anchor" href="#_responses_7"></a>Responses</h5>
+<h5 id="_responses_6"><a class="anchor" href="#_responses_6"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1260,7 +1210,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_8"><a class="anchor" href="#_description_8"></a>Description</h5>
+<h5 id="_description_7"><a class="anchor" href="#_description_7"></a>Description</h5>
 <div class="paragraph">
 <p><strong>Update</strong> particular <em>color</em></p>
 </div>
@@ -1319,7 +1269,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect4">
-<h5 id="_responses_8"><a class="anchor" href="#_responses_8"></a>Responses</h5>
+<h5 id="_responses_7"><a class="anchor" href="#_responses_7"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1391,7 +1341,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_9"><a class="anchor" href="#_description_9"></a>Description</h5>
+<h5 id="_description_8"><a class="anchor" href="#_description_8"></a>Description</h5>
 <div class="paragraph">
 <p><strong>Retrieve</strong> particular <em>user</em></p>
 </div>
@@ -1422,7 +1372,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect4">
-<h5 id="_responses_9"><a class="anchor" href="#_responses_9"></a>Responses</h5>
+<h5 id="_responses_8"><a class="anchor" href="#_responses_8"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1494,7 +1444,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_10"><a class="anchor" href="#_description_10"></a>Description</h5>
+<h5 id="_description_9"><a class="anchor" href="#_description_9"></a>Description</h5>
 <div class="paragraph">
 <p><strong>Delete</strong> particular <em>user</em></p>
 </div>
@@ -1525,7 +1475,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect4">
-<h5 id="_responses_10"><a class="anchor" href="#_responses_10"></a>Responses</h5>
+<h5 id="_responses_9"><a class="anchor" href="#_responses_9"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1597,7 +1547,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="_description_11"><a class="anchor" href="#_description_11"></a>Description</h5>
+<h5 id="_description_10"><a class="anchor" href="#_description_10"></a>Description</h5>
 <div class="paragraph">
 <p><strong>Update</strong> particular <em>user</em></p>
 </div>
@@ -1656,7 +1606,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect4">
-<h5 id="_responses_11"><a class="anchor" href="#_responses_11"></a>Responses</h5>
+<h5 id="_responses_10"><a class="anchor" href="#_responses_10"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1715,6 +1665,66 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>apiKey</strong></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong><a href="#_token">token</a></strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guest_endpoints_resource"><a class="anchor" href="#_guest_endpoints_resource"></a>Guest Endpoints</h3>
+<div class="sect3">
+<h4 id="_get-colors-guest"><a class="anchor" href="#_get-colors-guest"></a><strong>List</strong> available <em>colors</em></h4>
+<div class="literalblock">
+<div class="content">
+<pre>GET /colors (guest)</pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_description_11"><a class="anchor" href="#_description_11"></a>Description</h5>
+<div class="paragraph">
+<p><strong>List</strong> available <em>colors</em></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses_11"><a class="anchor" href="#_responses_11"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">HTTP Code</th>
+<th class="tableblock halign-left valign-middle">Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>200</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_get-colors-guest_response_200">Response 200</a></p></td>
+</tr>
+</tbody>
+</table>
+<div id="_get-colors-guest_response_200" class="paragraph">
+<p><strong>Response 200</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 42.8571%;">
+<col style="width: 57.1429%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Name</th>
+<th class="tableblock halign-left valign-middle">Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>colors</strong><br>
+<em>required</em></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">&lt; <a href="#_color">Color</a> &gt; array</p></td>
 </tr>
 </tbody>
 </table>
@@ -1963,7 +1973,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-06-24 23:35:22 AEST
+Last updated 2018-06-25 00:00:24 AEST
 </div>
 </div>
 </body>
