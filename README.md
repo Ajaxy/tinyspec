@@ -1,15 +1,17 @@
 # tinyspec
 [![NPM version](https://img.shields.io/npm/v/tinyspec.svg)](https://npmjs.com/package/tinyspec)
 
-[About](#about)  
-[Installing](#installing)  
-[Quick Start](#quick-start)  
-[Tinyspec Syntax](#tinyspec-syntax)  
-&nbsp;&nbsp;[Object Models Definition](#object-models-definition)  
-&nbsp;&nbsp;[Endpoints Definition](#endpoints-paths-definition)  
-&nbsp;&nbsp;[API General Information](#api-general-information)  
-[Generating Documentation](#generating-documentation)  
-[Contributing](#contributing)
+- [About](#about)  
+- [Installing](#installing)  
+- [Quick Start](#quick-start)  
+- [Tinyspec Syntax](#tinyspec-syntax)  
+    - [Object Models Definition](#object-models-definition)  
+    - [Endpoints Definition](#endpoints-paths-definition)  
+    - [API General Information](#api-general-information)  
+- [Generating Documentation](#generating-documentation)  
+    - [Using With GitHub Pages](#generating-documentation-for-existing-projects-with-support-of-github-pages)
+    - [Using With Asciidoctor](#using-with-asciidoctor)
+- [Contributing](#contributing)
 
 ## About
 
@@ -218,7 +220,7 @@ To generate the documentation for GitHub pages from the existing project:
 
 For more information about GitHub Pages, [see this article](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/).
 
-### Using with Asciidoctor
+### Using With Asciidoctor
 Check out [this repo](https://github.com/Ajaxy/openapi-asciidoctor) to produce even more beautiful HTML (and PDF) output.
 
 ## Contributing
