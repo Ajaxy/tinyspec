@@ -218,6 +218,8 @@ To generate the documentation for GitHub pages from the existing project:
 
 For more information about GitHub Pages, [see this article](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/).
 
+### Using with Asciidoctor
+Check out [this repo](https://github.com/Ajaxy/openapi-asciidoctor) to produce even more beautiful HTML (and PDF) output.
 
 ## Contributing
 Contributions and feedback are always welcome. If you have an idea on how to make tinyspec better, feel free to create an issue and/or pull request.

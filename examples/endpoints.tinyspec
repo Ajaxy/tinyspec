@@ -3,7 +3,7 @@ Guest endpoints:
     $L /users
 
 Admin endpoints:
-    // List and filter `ColorExtended` records
+    // **List and filter** _extended colors_
     @token GET /colors (admin)?filter?&page?:i
         => {colors: ColorExtended[], totalCount: i}
 
