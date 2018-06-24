@@ -104,7 +104,7 @@ function generateHtml(json, target) {
         .load(bootprintOpenapi)
         .merge({
             handlebars: {
-                partials: path.join(__dirname, './bootprint_partials')
+                partials: path.join(__dirname, './lib/bootprint_partials')
             }
         })
         .build(json, target)
