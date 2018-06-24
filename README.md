@@ -27,7 +27,7 @@ npm install -g tinyspec
 ## Quick Start
 To generate the API documentation, follow these steps:
 
-1. Create [`models.tinyspec`](docs/models.tinyspec), [`endpoints.tinyspec`](docs/endpoints.tinyspec) and [`header.yaml`](docs/header.yaml) files. You can find more information on how to write these files yourself [below](#tinyspec-syntax).
+1. Create [`models.tinyspec`](examples/models.tinyspec), [`endpoints.tinyspec`](examples/endpoints.tinyspec) and [`header.yaml`](examples/header.yaml) files. You can find more information on how to write these files yourself below.
 2. Execute the `tinyspec -h` command in the same directory.
 
 You documentation is generated! It is available in the `docs` folder.    

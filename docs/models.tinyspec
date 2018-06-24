@@ -1,4 +1,0 @@
-User {id:i, organizationId:i, email, name, phone, status:i, type:?, createdAt:d}
-Organization {id:i, name, password, fallbackNumber}
-EmsAgency {id:i, dispatchId:i, organizationId:i, name}
-Hospital {id:i, name, specialties, lat:i?, lng:i?}

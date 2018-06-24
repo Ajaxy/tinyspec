@@ -17,7 +17,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "example:docs": "tinyspec -h -o docs/"
   },
   "repository": {
     "type": "git",
@@ -25,9 +25,11 @@
   },
   "keywords": [
     "api",
+    "rest",
+    "openapi",
     "swagger",
     "specification",
-    "rest",
+    "documentation",
     "models",
     "definitions",
     "endpoints",

@@ -1,0 +1,8 @@
+User {id: i, name, email, favoriteColors?: Color[]}
+UserNew !{name, email}
+UserUpdate !{name?, email?, favoriteColorIds?: i[]}
+
+Color {name, code}
+ColorNew !{name, code}
+ColorUpdate !{name?, code?}
+ColorExtended < Color {id: i, createdAt: d, updatedAt?: d}
