@@ -50,20 +50,20 @@ You can describe any number of objects in a single `*.models.tinyspec` file. By 
 #### Intput Data Type
 To specify the expected data type, add it after semicolon (`:`). To make fields accept arrays, add brackets (`[]`). For example to define an object:
 ```
-MyObject {field1: s, field2: float[]}
+MyObject {field1: b, field2: float[]}
 ```
 You can use the full type name (`string`, `integer`, `boolean`, etc) or a shorthand (`s`, `i`, `b` and so on). Possible values:
 
 Shorthand|Full|OpenAPI type|OpenAPI format|
 ---------|----|------------|--------------|
 `i`| `integer`
-`f`| `number`
 `s`| `string`
 `b`| `boolean`
+`o`| `object`
+`f`| `float` | `number` | `float`
 `d`| `datetime` | `string` | `date-time`
-`t`| `text` | `string`
-`j`| `json` | `string`
-`h`| `hash` | `object`
+`t`| `text` | `string` | `text`
+`j`| `json` | `string` | `json`
 
 
 #### Optional Fields
