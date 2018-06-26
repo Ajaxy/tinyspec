@@ -59,10 +59,10 @@ Shorthand|Full|OpenAPI type|OpenAPI format|
 `s`| `string`
 `b`| `boolean`
 `o`| `object`
-`f`| `float` | `number` | `float`
+`f`| `float` | `number`
 `d`| `datetime` | `string` | `date-time`
-`t`| `text` | `string` | `text`
-`j`| `json` | `string` | `json`
+`t`| `text` | `string`
+`j`| `json` | `string`
 
 
 #### Optional Fields
