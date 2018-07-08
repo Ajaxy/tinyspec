@@ -88,9 +88,9 @@ MyOtherObject < MyObject {-field2, field3}
 As a result, `MyOtherObject` will have `field1` and `field3` values, but `field2` will be excluded.
 
 ### Endpoints (Paths) Definition
-Endpoints (_paths_) are described in `endpoints.tinyspec` files. As with object descriptions, you can split endpoint definitions into multiple `*.endpoints.tinyspec` files or place them in folders to make the documentation easier to maintain.
+Endpoints (_paths_) are described in `endpoints.tinyspec` files. As with object definitions, you can split endpoint definitions into multiple `*.endpoints.tinyspec` files or place them in folders to make the documentation easier to maintain.
 
-The basic endpoint description looks like this:
+The basic endpoint definition looks like this:
 ```
 POST /resources {key: Model}
     => {success: b, error: b}
@@ -106,12 +106,15 @@ Request _body parameters_ are specified using `{...}` right after the resource n
 To specify _query parameters_, add the question mark (`?`) after the path and list the query parameters. 
 You can add multiple parameters by connecting them with the ampersand symbol (`&`).
 
-_Responses_ are specified below the endpoint definitions prefixed with an indent and `=>` sign.
+_Responses_ are specified below the endpoint definitions prefixed with an indent and `=>` sign. You can specify status before the response definition, otherwise the status `200` is used by default.
+You can also provide a response description using a `//` comment.
 
-Parameters and responses description format is the same as for objects. For example, you can make some parameters optional or specify the required data type:
+Parameters and responses definition format is the same as for objects. For example, you can refer to other models, make some parameters optional or specify the required data type:
 ```
 GET /examples?sort&limit?:i
     => {examples: Example[], totalCount?: i}
+    // Response description
+    => 404 NotFoundError
 ```
 
 #### Endpoints Description
