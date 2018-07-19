@@ -44,9 +44,9 @@ The basic object looks like this:
 ```
 MyObject {field1, field2}
 ```
-You can describe any number of objects in a single `*.models.tinyspec` file. By default, all fields are required and accept `string` data values.
+You can describe any number of objects in a single `*.models.tinyspec` file. Fields should be separated by `,` or `;`. By default, all fields are required and accept `string` data values.
 
-#### Intput Data Type
+#### Data Types
 To specify the expected data type, add it after semicolon (`:`). To make fields accept arrays, add brackets (`[]`). For example to define an object:
 ```
 MyObject {field1: b, field2: float[]}
@@ -86,6 +86,15 @@ MyObject {field1, field2}
 MyOtherObject < MyObject {-field2, field3}
 ```
 As a result, `MyOtherObject` will have `field1` and `field3` values, but `field2` will be excluded.
+
+#### Multiline Models
+Your models may be multiline:
+```
+MyObject {
+    field1: integer;
+    field2: boolean;
+}
+```
 
 ### Endpoints (Paths) Definition
 Endpoints (_paths_) are described in `endpoints.tinyspec` files. As with object definitions, you can split endpoint definitions into multiple `*.endpoints.tinyspec` files or place them in folders to make the documentation easier to maintain.
