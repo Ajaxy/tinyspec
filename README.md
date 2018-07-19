@@ -139,7 +139,7 @@ GET /examples
 
 // **Create** new _example_
 POST /examples {example: ExampleNew}
-    => {success: b, id: i}
+    => 201 {example: Example}
 
 // **Retrieve** particular _example_
 GET /examples/:id
@@ -147,7 +147,7 @@ GET /examples/:id
 
 // **Update** particular _example_
 PATCH /examples/:id {example: ExampleUpdate}
-    => {success: b}
+    => {example: Example}
 
 // **Delete** particular _example_
 DELETE /examples/:id
