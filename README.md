@@ -5,7 +5,7 @@
 - [Installing](#installing)  
 - [Quick Start and Demo](#quick-start-and-demo)  
 - [Tinyspec Syntax](#tinyspec-syntax)  
-    - [Object Models Definition](#object-models-definition)  
+    - [Models Definition](#models-definition)  
     - [Endpoints Definition](#endpoints-paths-definition)  
     - [API General Information](#api-general-information)  
 - [Generating Documentation](#generating-documentation)  
@@ -15,7 +15,7 @@
 
 ## About
 
-Tinyspec offers a lightweight and human-readable alternative to the more verbose [OpenAPI/Swagger](https://github.com/OAI/OpenAPI-Specification) format. It relies on the strengths of the OpenAPI format without the need to maintain the single large JSON or YAML file or to use some special software, instead allowing you to keep your API endpoints and object models in separate and easy to maintain files.
+Tinyspec offers a lightweight and human-readable alternative to the more verbose [OpenAPI/Swagger](https://github.com/OAI/OpenAPI-Specification) format. It relies on the strengths of the OpenAPI format without the need to maintain the single large JSON or YAML file or to use some special software, instead allowing you to keep your API endpoints and models in separate and easy to maintain files.
 
 Possible outputs include a full OpenAPI definition in YAML and JSON formats, or the API description in HTML format created with the help of the [bootprint-openapi](https://github.com/bootprint/bootprint-openapi).
 
@@ -35,21 +35,21 @@ To generate the API documentation, follow these steps:
 You documentation is generated! Check out this [**DEMO**](https://ajaxy.github.io/tinyspec) to see how it may look like.
 
 ## Tinyspec Syntax
-Tinyspec definition is split into 3 different sections. You specify objects and endpoints that the API uses in the special tinyspec format and place any extra information in the `header.yaml` file.
+Tinyspec definition is split into 3 different sections. You specify models and endpoints that the API uses in the special tinyspec format and place any extra information in the `header.yaml` file.
 
-### Object Models Definition
-Object models (_definitions_) are described in `models.tinyspec` files. You can also split object definitions in multiple `*.models.tinyspec` files and even place them in folders to make the API documentation easier to maintain.
+### Models Definition
+Models (_definitions_) are described in `models.tinyspec` files. You can also split model definitions in multiple `*.models.tinyspec` files and even place them in folders to make the API documentation easier to maintain.
 
-The basic object looks like this:
+The basic model looks like this:
 ```
-MyObject {field1, field2}
+MyModel {field1, field2}
 ```
-You can describe any number of objects in a single `*.models.tinyspec` file. Fields should be separated by `,` or `;`. By default, all fields are required and accept `string` data values.
+You can describe any number of models in a single `*.models.tinyspec` file. Fields should be separated by `,` or `;`. By default, all fields are required and accept `string` data values.
 
 #### Data Types
 To specify the expected data type, add it after semicolon (`:`). To make fields accept arrays, add brackets (`[]`). For example to define an object:
 ```
-MyObject {field1: b, field2: float[]}
+MyModel {field1: b, field2: float[]}
 ```
 You can use the full type name (`string`, `integer`, `boolean`, etc) or a shorthand (`s`, `i`, `b` and so on). Possible values:
 
@@ -68,36 +68,36 @@ Shorthand|Full|OpenAPI type|OpenAPI format|
 #### Optional Fields
 To mark the field as optional, add a question mark (`?`) after the field name, for example:
 ```
-MyObject {field1?, field2?: b}
+MyModel {field1?, field2?: b}
 ```
 #### Strict Definition Adherence
 By default, requests can contain extra information that is not described in the definition. If you need a strict adherence to the schema, add an exclamation mark (`!`) before the definitions, for example:
 ```
-MyObject !{field1, field2}
+MyModel !{field1, field2}
 ```
 This is a representation of OpenAPI `additionalProperties: false`.
 
 #### Reusing Previously Defined Model
-You can reuse the defined object and create a new one as needed. Use the less-than sign (`<`) to reuse the object. 
+You can reuse the defined model object and create a new one as needed. Use the less-than sign (`<`) to reuse the object. 
 When you reuse the object, you can remove a part of its definition. To do this, add a minus sign before the field (`-`). 
-You can also add additional objects as needed. Here is how you can do this:
+You can also add additional fields as needed. Here is how you can do this:
 ```
-MyObject {field1, field2}
-MyOtherObject < MyObject {-field2, field3}
+MyModel {field1, field2}
+MyOtherModel < MyModel {-field2, field3}
 ```
-As a result, `MyOtherObject` will have `field1` and `field3` values, but `field2` will be excluded.
+As a result, `MyOtherModel` will have `field1` and `field3` values, but `field2` will be excluded.
 
 #### Multiline Models
 Your models may be multiline:
 ```
-MyObject {
+MyModel {
     field1: integer;
     field2: boolean;
 }
 ```
 
 ### Endpoints (Paths) Definition
-Endpoints (_paths_) are described in `endpoints.tinyspec` files. As with object definitions, you can split endpoint definitions into multiple `*.endpoints.tinyspec` files or place them in folders to make the documentation easier to maintain.
+Endpoints (_paths_) are described in `endpoints.tinyspec` files. As with models definitions, you can split endpoint definitions into multiple `*.endpoints.tinyspec` files or place them in folders to make the documentation easier to maintain.
 
 The basic endpoint definition looks like this:
 ```
@@ -118,7 +118,7 @@ You can add multiple parameters by connecting them with the ampersand symbol (`&
 _Responses_ are specified below the endpoint definitions prefixed with an indent and `=>` sign. You can specify status before the response definition, otherwise the status `200` is used by default.
 You can also provide a response description using a `//` comment.
 
-Parameters and responses definition format is the same as for objects. For example, you can refer to other models, make some parameters optional or specify the required data type:
+Parameters and responses definition format is the same as for models. For example, you can refer to other models, make some parameters optional or specify the required data type:
 ```
 GET /examples?sort&limit?:i
     => {examples: Example[], totalCount?: i}
@@ -129,7 +129,7 @@ GET /examples?sort&limit?:i
 #### Endpoints Description
 To create a description for the endpoint, add a `//` comment before its specification. This description supports Markdown. Here is how it looks like:
 ```
-// Get **ALL** the objects.
+// Get **ALL** objects.
 GET /examples
     => {examples: Example[]}
 ```
@@ -177,7 +177,7 @@ securityDefinitions:
 
 // examples.endpoints.tinyspec
 @auth GET /examples
-    => {examples: MyObject}
+    => {examples: MyModel}
 ```
 
 #### Endpoint Tags
@@ -202,7 +202,7 @@ Admin endpoints:
 ```
 
 ### API General Information
-For any API information other than API endpoints and objects you use the `header.yaml` file. The file should be written in regular OpenAPI format.
+For any API information other than API endpoints and models you use the `header.yaml` file. The file should be written in regular OpenAPI format.
 
 ## Generating Documentation
 To generate OpenAPI or HTML specification from tinyspec format, run it with one of the available options:
