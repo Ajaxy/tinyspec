@@ -75,7 +75,7 @@ You can reference other models:
 ```
 Dimensions {width: i, height: i}
 Color (red|green|blue)
-MyModel {dimenstions: Dimensions, color: Color}
+MyModel {dimensions: Dimensions, color: Color}
 ``` 
 
 #### Optional Fields
