@@ -14,4 +14,5 @@ ColorExtended < Color {
     id: integer;
     createdAt: datetime;
     updatedAt?: datetime;
+    primaryChannel: (red|green|blue);
 }

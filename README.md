@@ -64,6 +64,19 @@ Shorthand|Full|OpenAPI type|OpenAPI format|
 `t`| `text` | `string`
 `j`| `json` | `string`
 
+#### Enum
+You can describe a fixed list of possible values separated by `|` within parentheses `()`.
+```
+MyModel {color: (sample|42|true)}
+```
+
+#### References to Other Models
+You can reference other models:
+```
+Dimensions {width: i, height: i}
+Color (red|green|blue)
+MyModel {dimenstions: Dimensions, color: Color}
+``` 
 
 #### Optional Fields
 To mark the field as optional, add a question mark (`?`) after the field name, for example:
