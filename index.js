@@ -43,11 +43,10 @@ switch (mode) {
 tinyspec [options]
 
 Options:
-    --yaml | -y     Generate OpenAPI/Swagger YAML (default)
+    --yaml | -y     Generate OpenAPI/Swagger YAML
     --json | -j     Generate OpenAPI/Swagger JSON
     --html | -h     Generate HTML/CSS document
     --output | -o    Path to output generated files
-    --add-default-attrs     Add \`id\`, \`created_at\` and \`updated_at\` to all models
     --add-nulls     Include \`null\` as possible value for non-required fields
     --help          Display this help
 `
