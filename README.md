@@ -1,14 +1,14 @@
 # tinyspec
 [![NPM version](https://img.shields.io/npm/v/tinyspec.svg)](https://npmjs.com/package/tinyspec)
 
-- [About](#about)  
-- [Installing](#installing)  
-- [Quick Start and Demo](#quick-start-and-demo)  
-- [Tinyspec Syntax](#tinyspec-syntax)  
-    - [Models Definition](#models-definition)  
-    - [Endpoints Definition](#endpoints-paths-definition)  
-    - [API General Information](#api-general-information)  
-- [Generating Documentation](#generating-documentation)  
+- [About](#about)
+- [Installing](#installing)
+- [Quick Start and Demo](#quick-start-and-demo)
+- [Tinyspec Syntax](#tinyspec-syntax)
+    - [Models Definition](#models-definition)
+    - [Endpoints Definition](#endpoints-paths-definition)
+    - [API General Information](#api-general-information)
+- [Generating Documentation](#generating-documentation)
     - [Using With GitHub Pages](#generating-documentation-for-existing-projects-with-support-of-github-pages)
     - [Using With Asciidoctor](#using-with-asciidoctor)
 - [Contributing](#contributing)
@@ -76,7 +76,7 @@ You can reference other models:
 Dimensions {width: i, height: i}
 Color (red|green|blue)
 MyModel {dimensions: Dimensions, color: Color}
-``` 
+```
 
 #### Optional Fields
 To mark the field as optional, add a question mark (`?`) after the field name, for example:
@@ -91,8 +91,8 @@ MyModel !{field1, field2}
 This is a representation of OpenAPI `additionalProperties: false`.
 
 #### Reusing Previously Defined Model
-You can reuse the defined model object and create a new one as needed. Use the less-than sign (`<`) to reuse the object. 
-When you reuse the object, you can remove a part of its definition. To do this, add a minus sign before the field (`-`). 
+You can reuse the defined model object and create a new one as needed. Use the less-than sign (`<`) to reuse the object.
+When you reuse the object, you can remove a part of its definition. To do this, add a minus sign before the field (`-`).
 You can also add additional fields as needed. Here is how you can do this:
 ```
 MyModel {field1, field2}
@@ -125,7 +125,7 @@ You can expand it in the following ways:
 #### Parameters and Responses
 Request _body parameters_ are specified using `{...}` right after the resource name (see example above).
 
-To specify _query parameters_, add the question mark (`?`) after the path and list the query parameters. 
+To specify _query parameters_, add the question mark (`?`) after the path and list the query parameters.
 You can add multiple parameters by connecting them with the ampersand symbol (`&`).
 
 _Responses_ are specified below the endpoint definitions prefixed with an indent and `=>` sign. You can specify status before the response definition, otherwise the status `200` is used by default.
@@ -176,7 +176,7 @@ DELETE /examples/:id
     => {success: b}
 ```
 
-If you only need some methods, omit the key you do not need (for example `$RD` will only create _retrieve_ and _delete_ actions). 
+If you only need some methods, omit the key you do not need (for example `$RD` will only create _retrieve_ and _delete_ actions).
 
 #### Authorization
 If your API uses authorization, describe the authorization method in the `headers.yaml` file and then address it in before the endpoint definition by using the at sign (`@`). For example:
@@ -223,13 +223,12 @@ To generate OpenAPI or HTML specification from tinyspec format, run it with one 
 tinyspec [option]
 
 Options:
-    --yaml | -y     Generates OpenAPI/Swagger YAML (default).
-    --json | -j     Generates OpenAPI/Swagger JSON.
-    --html | -h     Generates HTML/CSS document.
-    --output | -o   The folder to place generated documentation to. Default: /docs
-    --add-nulls     Creates JSON-Schema compliant structure for models. Incompatible with HTML outputs.
-    --no-default-attrs     If not specified, `id: i`, `created_at: d` and `updated_at: d` fields are added for all models without underscores(_) at the start.
-    --help          Displays this help.
+    --yaml | -y     Generate OpenAPI/Swagger YAML
+    --json | -j     Generate OpenAPI/Swagger JSON
+    --html | -h     Generate HTML/CSS document
+    --output | -o    Path to place generated files
+    --add-nulls     Include `null` as possible value for non-required fields
+    --help          Display this help
 ```
 
 ### Generating Documentation for Existing Projects With Support of GitHub Pages

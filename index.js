@@ -20,8 +20,8 @@ const transformModels = require('./lib/transformModels');
 
 const argv = require('yargs').argv;
 
-const TARGET_YAML_FILE = 'swagger.yaml';
-const TARGET_JSON_FILE = 'swagger.json';
+const TARGET_YAML_FILE = 'openapi.yaml';
+const TARGET_JSON_FILE = 'openapi.json';
 
 const srcDir = process.cwd();
 const outputDir = argv.output || argv.o || '.';
@@ -46,7 +46,7 @@ Options:
     --yaml | -y     Generate OpenAPI/Swagger YAML
     --json | -j     Generate OpenAPI/Swagger JSON
     --html | -h     Generate HTML/CSS document
-    --output | -o    Path to output generated files
+    --output | -o    Path to place generated files
     --add-nulls     Include \`null\` as possible value for non-required fields
     --help          Display this help
 `
