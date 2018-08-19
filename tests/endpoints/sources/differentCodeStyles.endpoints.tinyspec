@@ -4,7 +4,7 @@ My tag:
   # `:` instead of `=` before query param type
   # `;` as a delimiter in body params
   # No spaces in props
-  PATCH /parent/:a/resources/:b (group)?c&d?&e:boolean {f;g?;h:i[]}
+  @token PATCH /parent/:a/resources/:b (variant)?c&d?&e:boolean {f;g?;h:i[]}
 
   # No indent in responses
   => 200 { resource: Resource } # Spaces around braces

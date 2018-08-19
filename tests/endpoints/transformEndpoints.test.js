@@ -6,6 +6,9 @@ const tests = [
   'Basic',
   'Complex',
   'Different code styles',
+  'CRUDL basic',
+  'CRUDL custom models',
+  'CRUDL override',
 ];
 
 describe('Endpoints to OpenAPI paths', () => {

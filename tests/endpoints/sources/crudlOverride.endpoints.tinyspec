@@ -1,0 +1,5 @@
+$LR /my1Resources
+
+// Update my resource
+PATCH /my1Resources/:id {my1Key: CustomResource1}
+    => {my2Key: CustomResource2}

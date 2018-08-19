@@ -1,0 +1,107 @@
+{
+  "paths": {
+    "/my1Resources": {
+      "get": {
+        "summary": "**List** available _my1Resources_",
+        "description": "**List** available _my1Resources_",
+        "operationId": "GET--my1Resources",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "my1Resources": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/My1Resource"
+                  }
+                }
+              },
+              "required": [
+                "my1Resources"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/my1Resources/:id": {
+      "get": {
+        "summary": "**Retrieve** _my1Resource_",
+        "description": "**Retrieve** _my1Resource_",
+        "operationId": "GET--my1Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "my1Resource": {
+                  "$ref": "#/definitions/My1Resource"
+                }
+              },
+              "required": [
+                "my1Resource"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          }
+        ]
+      },
+      "patch": {
+        "summary": "Update my resource",
+        "description": "Update my resource",
+        "operationId": "PATCH--my1Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "my2Key": {
+                  "$ref": "#/definitions/CustomResource2"
+                }
+              },
+              "required": [
+                "my2Key"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          },
+          {
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "my1Key": {
+                  "$ref": "#/definitions/CustomResource1"
+                }
+              },
+              "required": [
+                "my1Key"
+              ]
+            },
+            "in": "body"
+          }
+        ]
+      }
+    }
+  },
+  "tags": []
+}

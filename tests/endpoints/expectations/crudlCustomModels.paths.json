@@ -1,0 +1,515 @@
+{
+  "paths": {
+    "/my1Resources": {
+      "get": {
+        "summary": "**List** available _customKeys_",
+        "description": "**List** available _customKeys_",
+        "operationId": "GET--my1Resources",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKeys": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/CustomModel1"
+                  }
+                }
+              },
+              "required": [
+                "customKeys"
+              ]
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "**Create** new _customKey_",
+        "description": "**Create** new _customKey_",
+        "operationId": "POST--my1Resources",
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKey": {
+                  "$ref": "#/definitions/CustomModel1"
+                }
+              },
+              "required": [
+                "customKey"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKey": {
+                  "$ref": "#/definitions/CustomModel1"
+                }
+              },
+              "required": [
+                "customKey"
+              ]
+            },
+            "in": "body"
+          }
+        ]
+      }
+    },
+    "/my1Resources/:id": {
+      "get": {
+        "summary": "**Retrieve** _customKey_",
+        "description": "**Retrieve** _customKey_",
+        "operationId": "GET--my1Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKey": {
+                  "$ref": "#/definitions/CustomModel1"
+                }
+              },
+              "required": [
+                "customKey"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          }
+        ]
+      },
+      "patch": {
+        "summary": "**Update** _customKey_",
+        "description": "**Update** _customKey_",
+        "operationId": "PATCH--my1Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKey": {
+                  "$ref": "#/definitions/CustomModel1"
+                }
+              },
+              "required": [
+                "customKey"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          },
+          {
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKey": {
+                  "$ref": "#/definitions/CustomModel1"
+                }
+              },
+              "required": [
+                "customKey"
+              ]
+            },
+            "in": "body"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "**Delete** _customKey_",
+        "description": "**Delete** _customKey_",
+        "operationId": "DELETE--my1Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          }
+        ]
+      }
+    },
+    "/my2Resources": {
+      "get": {
+        "summary": "**List** available _customKeys_",
+        "description": "**List** available _customKeys_",
+        "operationId": "GET--my2Resources",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKeys": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/CustomModel2"
+                  }
+                }
+              },
+              "required": [
+                "customKeys"
+              ]
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "**Create** new _customKey_",
+        "description": "**Create** new _customKey_",
+        "operationId": "POST--my2Resources",
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKey": {
+                  "$ref": "#/definitions/CustomModel2"
+                }
+              },
+              "required": [
+                "customKey"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKey": {
+                  "$ref": "#/definitions/CustomModel2New"
+                }
+              },
+              "required": [
+                "customKey"
+              ]
+            },
+            "in": "body"
+          }
+        ]
+      }
+    },
+    "/my2Resources/:id": {
+      "get": {
+        "summary": "**Retrieve** _customKey_",
+        "description": "**Retrieve** _customKey_",
+        "operationId": "GET--my2Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKey": {
+                  "$ref": "#/definitions/CustomModel2"
+                }
+              },
+              "required": [
+                "customKey"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          }
+        ]
+      },
+      "patch": {
+        "summary": "**Update** _customKey_",
+        "description": "**Update** _customKey_",
+        "operationId": "PATCH--my2Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKey": {
+                  "$ref": "#/definitions/CustomModel2"
+                }
+              },
+              "required": [
+                "customKey"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          },
+          {
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "customKey": {
+                  "$ref": "#/definitions/CustomModel2Update"
+                }
+              },
+              "required": [
+                "customKey"
+              ]
+            },
+            "in": "body"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "**Delete** _customKey_",
+        "description": "**Delete** _customKey_",
+        "operationId": "DELETE--my2Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          }
+        ]
+      }
+    },
+    "/my3Resources": {
+      "get": {
+        "summary": "**List** available _my3Resources_",
+        "description": "**List** available _my3Resources_",
+        "operationId": "GET--my3Resources",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "my3Resources": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/CustomModel3"
+                  }
+                }
+              },
+              "required": [
+                "my3Resources"
+              ]
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "**Create** new _my3Resource_",
+        "description": "**Create** new _my3Resource_",
+        "operationId": "POST--my3Resources",
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "my3Resource": {
+                  "$ref": "#/definitions/CustomModel3"
+                }
+              },
+              "required": [
+                "my3Resource"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "my3Resource": {
+                  "$ref": "#/definitions/CustomModel3"
+                }
+              },
+              "required": [
+                "my3Resource"
+              ]
+            },
+            "in": "body"
+          }
+        ]
+      }
+    },
+    "/my3Resources/:id": {
+      "get": {
+        "summary": "**Retrieve** _my3Resource_",
+        "description": "**Retrieve** _my3Resource_",
+        "operationId": "GET--my3Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "my3Resource": {
+                  "$ref": "#/definitions/CustomModel3"
+                }
+              },
+              "required": [
+                "my3Resource"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          }
+        ]
+      },
+      "patch": {
+        "summary": "**Update** _my3Resource_",
+        "description": "**Update** _my3Resource_",
+        "operationId": "PATCH--my3Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "my3Resource": {
+                  "$ref": "#/definitions/CustomModel3"
+                }
+              },
+              "required": [
+                "my3Resource"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          },
+          {
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "my3Resource": {
+                  "$ref": "#/definitions/CustomModel3"
+                }
+              },
+              "required": [
+                "my3Resource"
+              ]
+            },
+            "in": "body"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "**Delete** _my3Resource_",
+        "description": "**Delete** _my3Resource_",
+        "operationId": "DELETE--my3Resources--id",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          }
+        ]
+      }
+    }
+  },
+  "tags": []
+}

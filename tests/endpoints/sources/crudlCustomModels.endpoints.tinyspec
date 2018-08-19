@@ -1,0 +1,5 @@
+$CRUDL /my1Resources {customKey: CustomModel1}
+
+$CRUDL /my2Resources {customKey: CustomModel2$}
+
+$CRUDL /my3Resources CustomModel3
