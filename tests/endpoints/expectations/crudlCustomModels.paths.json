@@ -2,8 +2,8 @@
   "paths": {
     "/my1Resources": {
       "get": {
-        "summary": "**List** available _customKeys_",
-        "description": "**List** available _customKeys_",
+        "summary": "**List** _customKeys_",
+        "description": "**List** _customKeys_",
         "operationId": "GET--my1Resources",
         "responses": {
           "200": {
@@ -172,8 +172,8 @@
     },
     "/my2Resources": {
       "get": {
-        "summary": "**List** available _customKeys_",
-        "description": "**List** available _customKeys_",
+        "summary": "**List** _customKeys_",
+        "description": "**List** _customKeys_",
         "operationId": "GET--my2Resources",
         "responses": {
           "200": {
@@ -342,8 +342,8 @@
     },
     "/my3Resources": {
       "get": {
-        "summary": "**List** available _my3Resources_",
-        "description": "**List** available _my3Resources_",
+        "summary": "**List** _my3Resources_",
+        "description": "**List** _my3Resources_",
         "operationId": "GET--my3Resources",
         "responses": {
           "200": {
