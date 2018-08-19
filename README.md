@@ -8,6 +8,7 @@
     - [Models Definition](#models-definition)
     - [Endpoints Definition](#endpoints-paths-definition)
     - [API General Information](#api-general-information)
+    - [Comments](#comments)
 - [Generating Documentation](#generating-documentation)
     - [Using With GitHub Pages](#generating-documentation-for-existing-projects-with-support-of-github-pages)
     - [Using With Asciidoctor](#using-with-asciidoctor)
@@ -216,6 +217,9 @@ Admin endpoints:
 
 ### API General Information
 For any API information other than API endpoints and models you use the `header.yaml` file. The file should be written in regular OpenAPI format.
+
+### Comments
+You can add one-line comments prefixed with symbol `#` in any place. Comments will be ignored during parsing.
 
 ## Generating Documentation
 To generate OpenAPI or HTML specification from tinyspec format, run it with one of the available options:

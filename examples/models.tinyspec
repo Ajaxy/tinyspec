@@ -1,5 +1,7 @@
+# Regular model
 User {id: i, name, email, favoriteColors?: Color[]}
 
+# Creation data: no extra fields allowed
 UserNew !{name, email}
 
 UserUpdate !{name?, email?, favoriteColorIds?: i[]}
@@ -10,9 +12,10 @@ ColorNew !{name, code}
 
 ColorUpdate !{name?, code?}
 
+# Multi-line definition
 ColorExtended < Color {
     id: integer;
     createdAt: datetime;
     updatedAt?: datetime;
-    primaryChannel: (red|green|blue);
+    primaryChannel: (red|green|blue); # Enum-field
 }
