@@ -5,20 +5,22 @@ const path = require('path');
 const glob = require('glob');
 const _ = require('lodash');
 const YAML = require('yamljs');
+const { argv } = require('yargs');
 
 let bootprint;
 let bootprintOpenapi;
 
+/* eslint-disable global-require, import/no-unresolved */
 try {
   bootprint = require('bootprint');
   bootprintOpenapi = require('bootprint-openapi');
 } catch (err) {
+  // Continue.
 }
+/* eslint-enable global-require, import/no-unresolved */
 
 const transformEndpoints = require('./lib/transformEndpoints');
 const transformModels = require('./lib/transformModels');
-
-const argv = require('yargs').argv;
 
 const TARGET_YAML_FILE = 'openapi.yaml';
 const TARGET_JSON_FILE = 'openapi.json';
@@ -37,32 +39,21 @@ if (argv.yaml || argv.y) {
 }
 
 switch (mode) {
-  case 'help':
-    console.log(
-      `Usage:
-tinyspec [options]
-
-Options:
-    --yaml | -y     Generate OpenAPI/Swagger YAML
-    --json | -j     Generate OpenAPI/Swagger JSON
-    --html | -h     Generate HTML/CSS document
-    --output | -o    Path to place generated files
-    --add-nulls     Include \`null\` as possible value for non-required fields
-    --help          Display this help
-`,
-    );
-    break;
-  case 'yaml':
+  case 'yaml': {
     fs.writeFileSync(path.join(srcDir, outputDir, TARGET_YAML_FILE), generateYaml());
     break;
-  case 'json':
+  }
+  case 'json': {
     generateJson(generateYaml(), path.join(srcDir, outputDir, TARGET_JSON_FILE));
     break;
-  case 'html':
+  }
+  case 'html': {
     if (!bootprint || !bootprintOpenapi) {
+      // eslint-disable-next-line global-require
       const { peerDependencies } = require('./package');
       const installCommand = _.map(peerDependencies, (v, k) => `${k}@${v}`).join(' ');
 
+      // eslint-disable-next-line no-console
       console.error(`Please, install peer dependencies first: \`npm install ${installCommand}\``);
       process.exit(1);
     }
@@ -78,6 +69,25 @@ Options:
         }
       });
     break;
+  }
+  case 'help':
+  default: {
+    // eslint-disable-next-line no-console
+    console.log(
+      `Usage:
+tinyspec [options]
+
+Options:
+    --yaml | -y     Generate OpenAPI/Swagger YAML
+    --json | -j     Generate OpenAPI/Swagger JSON
+    --html | -h     Generate HTML/CSS document
+    --output | -o    Path to place generated files
+    --add-nulls     Include \`null\` as possible value for non-required fields
+    --help          Display this help
+`,
+    );
+    break;
+  }
 }
 
 function generateYaml() {
@@ -113,6 +123,8 @@ function generateHtml(json, target) {
     })
     .build(json, target)
     .generate()
+    // eslint-disable-next-line no-console
     .then(console.log)
+    // eslint-disable-next-line no-console
     .catch(console.error);
 }

@@ -17,10 +17,11 @@ const tests = [
   'Different code styles',
 ];
 
-describe('Models', () => {
+describe('Models to OpenAPI definitions', () => {
   _.forEach(tests, (name) => {
     const key = _.camelCase(name);
     const source = fs.readFileSync(`${__dirname}/sources/${key}.models.tinyspec`, { encoding: 'utf-8' });
+    // eslint-disable-next-line global-require, import/no-dynamic-require
     const expectation = require(`${__dirname}/expectations/${key}.definitions.json`);
 
     it(name, () => {
@@ -30,6 +31,7 @@ describe('Models', () => {
 
   it('Optional props with `options.addNulls = true`', () => {
     const source = fs.readFileSync(`${__dirname}/sources/optionalProps.models.tinyspec`, { encoding: 'utf-8' });
+    // eslint-disable-next-line global-require, import/no-dynamic-require
     const expectation = require(`${__dirname}/expectations/optionalPropsWithAddNulls.definitions.json`);
 
     expect(transformModels(source, { addNulls: true })).toEqual(expectation);

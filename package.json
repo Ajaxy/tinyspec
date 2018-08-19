@@ -19,7 +19,9 @@
   },
   "scripts": {
     "example:docs": "tinyspec -h -o docs/",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint .",
+    "precommit": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -44,6 +46,10 @@
   },
   "homepage": "https://github.com/Ajaxy/tinyspec#readme",
   "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^0.14.3",
     "jest": "^23.5.0"
   }
 }
