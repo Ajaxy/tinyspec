@@ -87,10 +87,13 @@ function generateYaml() {
     const header = fs.readFileSync(byType['header.yaml'][0], 'utf-8');
     const models = byType['models.tinyspec'].map((filePath) => fs.readFileSync(filePath)).join('\n\n');
     const endpoints = byType['endpoints.tinyspec'].map((filePath) => fs.readFileSync(filePath)).join('\n\n');
-    const pathsYaml = YAML.stringify(transformEndpoints(endpoints), Infinity, 2);
-    const modelsYaml = YAML.stringify(transformModels(models), Infinity, 2);
 
-    return [header, endpointsYaml, modelsYaml].join('\n');
+    const { addNulls } = argv;
+
+    const pathsYaml = YAML.stringify(transformEndpoints(endpoints), Infinity, 2);
+    const definitionsYaml = YAML.stringify(transformModels(models, { addNulls }), Infinity, 2);
+
+    return [header, pathsYaml, definitionsYaml].join('\n');
 }
 
 function generateJson(yamlSpec, target) {
