@@ -1,0 +1,21 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "enum": [
+        "x",
+        "y"
+      ]
+    },
+    "MyModel2": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "$ref": "#/definitions/MyModel1"
+        }
+      },
+      "required": [
+        "a"
+      ]
+    }
+  }
+}

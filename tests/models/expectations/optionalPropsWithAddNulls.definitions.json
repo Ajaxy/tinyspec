@@ -1,0 +1,69 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "b": {
+          "type": "string"
+        },
+        "c": {
+          "anyOf": [
+            {
+              "enum": [
+                "x",
+                "y",
+                "z"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "b"
+      ]
+    },
+    "MyModel2": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/MyModel1"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "b": {
+          "type": "string"
+        },
+        "c": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MyModel1"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "b"
+      ]
+    }
+  }
+}

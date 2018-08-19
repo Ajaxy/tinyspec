@@ -1,0 +1,7 @@
+# A comment
+
+My tag:
+    // Update resources
+    PATCH /parent/:a/resources/:b (group)?c&d?&e=boolean {f, g?, h: i[]}
+        => 200 {resource: Resource} # Another comment
+        => 404 NotFoundError

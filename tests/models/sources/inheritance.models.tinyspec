@@ -1,0 +1,10 @@
+MyModel1 !{a, b, c?, d?, e: b, f}
+MyModel2 < MyModel1 {-b, d, e: MyModel1, f?, g}
+
+MyModel3 {a?}
+
+# Edge case: full inheritance (alias)
+MyModel4 < MyModel3
+
+# Edge case: all optional props and removal indicator
+MyModel5 < MyModel3 {-a, b?}

@@ -3,7 +3,7 @@ General endpoints:
 
 Admin endpoints:
     // **List and filter** _extended colors_
-    @token GET /colors?filter&page:i
+    @token GET /colors?filter&page=i
         => {colors: ColorExtended[], totalCount: i}
 
     @token $CRUD /colors

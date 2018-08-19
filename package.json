@@ -18,7 +18,8 @@
     "bootprint-openapi": "^1.1.0"
   },
   "scripts": {
-    "example:docs": "tinyspec -h -o docs/"
+    "example:docs": "tinyspec -h -o docs/",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -41,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/Ajaxy/tinyspec/issues"
   },
-  "homepage": "https://github.com/Ajaxy/tinyspec#readme"
+  "homepage": "https://github.com/Ajaxy/tinyspec#readme",
+  "devDependencies": {
+    "jest": "^23.5.0"
+  }
 }

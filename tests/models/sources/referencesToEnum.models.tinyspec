@@ -1,0 +1,2 @@
+MyModel1 (x | y)
+MyModel2 {a: MyModel1}

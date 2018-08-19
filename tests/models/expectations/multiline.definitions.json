@@ -1,0 +1,31 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "enum": [
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        },
+        "b": {
+          "type": "string"
+        },
+        "c": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "a", "b", "c"
+      ]
+    }
+  }
+}

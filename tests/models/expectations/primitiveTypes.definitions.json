@@ -1,0 +1,149 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        },
+        "b": {
+          "type": "string"
+        },
+        "c": {
+          "type": "string"
+        },
+        "d": {
+          "type": "integer"
+        },
+        "e": {
+          "type": "integer"
+        },
+        "f": {
+          "type": "number"
+        },
+        "g": {
+          "type": "number"
+        },
+        "h": {
+          "type": "boolean"
+        },
+        "i": {
+          "type": "boolean"
+        },
+        "j": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "k": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "l": {
+          "type": "string"
+        },
+        "m": {
+          "type": "string"
+        },
+        "n": {
+          "type": "string"
+        },
+        "o": {
+          "type": "string"
+        },
+        "p": {
+          "type": "object"
+        },
+        "q": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q"
+      ]
+    },
+    "MyModel2": {
+      "type": "object",
+      "properties": {
+        "string": {
+          "type": "string"
+        },
+        "integer": {
+          "type": "string"
+        },
+        "float": {
+          "type": "string"
+        },
+        "b": {
+          "type": "string"
+        },
+        "d": {
+          "type": "string"
+        },
+        "t": {
+          "type": "string"
+        },
+        "j": {
+          "type": "string"
+        },
+        "o": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "string",
+        "integer",
+        "float",
+        "b",
+        "d",
+        "t",
+        "j",
+        "o"
+      ]
+    },
+    "MyModel3": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "string"
+        },
+        "i": {
+          "type": "string"
+        },
+        "f": {
+          "type": "string"
+        },
+        "b": {
+          "type": "string"
+        },
+        "d": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "json": {
+          "type": "string"
+        },
+        "object": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

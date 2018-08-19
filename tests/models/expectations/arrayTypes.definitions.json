@@ -1,0 +1,25 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "b": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "a",
+        "b"
+      ]
+    }
+  }
+}

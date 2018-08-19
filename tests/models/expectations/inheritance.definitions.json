@@ -1,0 +1,87 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        },
+        "b": {
+          "type": "string"
+        },
+        "c": {
+          "type": "string"
+        },
+        "d": {
+          "type": "string"
+        },
+        "e": {
+          "type": "boolean"
+        },
+        "f": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "e",
+        "f"
+      ],
+      "additionalProperties": false
+    },
+    "MyModel2": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        },
+        "c": {
+          "type": "string"
+        },
+        "d": {
+          "type": "string"
+        },
+        "e": {
+          "$ref": "#/definitions/MyModel1"
+        },
+        "f": {
+          "type": "string"
+        },
+        "g": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "a",
+        "d",
+        "e",
+        "g"
+      ]
+    },
+    "MyModel3": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        }
+      }
+    },
+    "MyModel4": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        }
+      }
+    },
+    "MyModel5": {
+      "type": "object",
+      "properties": {
+        "b": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

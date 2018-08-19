@@ -1,0 +1,4 @@
+MyModel1 {a: (x | 1 | true)}
+
+# Edge case: Single-value enum
+MyModel2 {a: (x)}

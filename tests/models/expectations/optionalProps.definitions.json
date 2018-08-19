@@ -1,0 +1,45 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        },
+        "b": {
+          "type": "string"
+        },
+        "c": {
+          "enum": [
+            "x",
+            "y",
+            "z"
+          ]
+        }
+      },
+      "required": [
+        "b"
+      ]
+    },
+    "MyModel2": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "$ref": "#/definitions/MyModel1"
+        },
+        "b": {
+          "type": "string"
+        },
+        "c": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MyModel1"
+          }
+        }
+      },
+      "required": [
+        "b"
+      ]
+    }
+  }
+}

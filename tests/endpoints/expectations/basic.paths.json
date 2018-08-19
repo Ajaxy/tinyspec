@@ -1,0 +1,28 @@
+{
+  "paths": {
+    "/myEndpoint": {
+      "get": {
+        "summary": "GET /myEndpoint",
+        "description": "GET /myEndpoint",
+        "operationId": "GET--myEndpoint",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

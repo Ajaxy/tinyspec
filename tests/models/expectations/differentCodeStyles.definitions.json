@@ -1,0 +1,79 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        },
+        "b": {
+          "type": "integer"
+        },
+        "c": {
+          "enum": [
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "MyModel2": {
+      "enum": [
+        "x",
+        "y"
+      ]
+    },
+    "MyModel3": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "boolean"
+        },
+        "b": {
+          "$ref": "#/definitions/MyModel2"
+        },
+        "c": {
+          "enum": [
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "c",
+        "a"
+      ]
+    },
+    "MyModel4": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        },
+        "b": {
+          "type": "string"
+        },
+        "c": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "MyModel5": {
+      "enum": [
+        "x",
+        "y",
+        "z"
+      ]
+    }
+  }
+}

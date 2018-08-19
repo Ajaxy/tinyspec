@@ -1,0 +1,16 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "a"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+MyModel1 (
+    x |
+    y |
+    z
+)
+
+MyModel1 {
+  a,
+  b,
+  c: integer[]
+}

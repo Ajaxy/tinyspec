@@ -1,0 +1,32 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "enum": [
+            "x",
+            1,
+            true
+          ]
+        }
+      },
+      "required": [
+        "a"
+      ]
+    },
+    "MyModel2": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "enum": [
+            "x"
+          ]
+        }
+      },
+      "required": [
+        "a"
+      ]
+    }
+  }
+}

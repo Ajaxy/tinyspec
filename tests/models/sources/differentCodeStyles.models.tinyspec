@@ -1,0 +1,30 @@
+# No spaces after model name
+# `;` as a delimiter
+# Trailing delimiter
+MyModel1{a;b:i;c:(x|y);}
+
+# Extra spaces after enum model name
+# No spaces between enum values
+MyModel2    (x|y)#Comment
+
+# No spaces in inheritance
+# Extra spaces after model name
+# Extra spaces around props braces
+MyModel3<MyModel1    { a:b,b?:MyModel2 }
+
+# Different indents in multi-line
+# Blank lines in multi-line
+MyModel4 {
+  a,
+    b,
+
+
+  c
+}
+
+# Different indents in multi-line enum
+MyModel5 (
+  x |
+    y |
+  z
+)

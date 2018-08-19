@@ -1,0 +1,100 @@
+{
+  "paths": {
+    "/parent/:a/resources/:b (group)": {
+      "patch": {
+        "summary": "Update resources",
+        "description": "Update resources",
+        "operationId": "PATCH--parent--a--resources--b--group",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "resource": {
+                  "$ref": "#/definitions/Resource"
+                }
+              },
+              "required": [
+                "resource"
+              ]
+            }
+          },
+          "404": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/NotFoundError",
+              "required": true
+            }
+          }
+        },
+        "tags": [
+          "My tag"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          },
+          {
+            "name": "b",
+            "required": true,
+            "type": "string",
+            "in": "path"
+          },
+          {
+            "name": "c",
+            "required": true,
+            "type": "string",
+            "in": "query"
+          },
+          {
+            "name": "d",
+            "required": false,
+            "type": "string",
+            "in": "query"
+          },
+          {
+            "name": "e",
+            "required": true,
+            "type": "boolean",
+            "in": "query"
+          },
+          {
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "f": {
+                  "type": "string"
+                },
+                "g": {
+                  "type": "string"
+                },
+                "h": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "required": [
+                "f",
+                "h"
+              ]
+            },
+            "in": "body"
+          }
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "My tag"
+    }
+  ]
+}
