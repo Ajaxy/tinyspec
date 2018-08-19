@@ -179,6 +179,12 @@ DELETE /examples/:id
 
 If you only need some methods, omit the key you do not need (for example `$RD` will only create _retrieve_ and _delete_ actions).
 
+By default the last _path_ member is used for model name and payload keys (see above).
+Alternatively, you can specify your own key and model name. You can also add postfix `$` to the model name to append `*New` and `*Update` postfixes in corresponding endpoints:
+```
+$CRUDL /examples {myKey: MyModel$}
+```
+
 #### Authorization
 If your API uses authorization, describe the authorization method in the `headers.yaml` file and then address it in before the endpoint definition by using the at sign (`@`). For example:
 ```
