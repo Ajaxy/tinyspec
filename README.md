@@ -39,7 +39,7 @@ You documentation is generated! Check out this [**DEMO**](https://ajaxy.github.i
 Tinyspec definition is split into 3 different sections. You specify models and endpoints that the API uses in the special tinyspec format and place any extra information in the `header.yaml` file.
 
 ### Models Definition
-Models (_definitions_) are described in `models.tinyspec` files. You can also split model definitions in multiple `*.models.tinyspec` files and even place them in folders to make the API documentation easier to maintain.
+Models (_definitions_) are described in `models.tinyspec` files. You can also split model definitions in multiple `*.models.tinyspec` files and even place them in folders to make the API specification easier to maintain.
 
 The basic model looks like this:
 ```
@@ -85,7 +85,7 @@ To mark the field as optional, add a question mark (`?`) after the field name, f
 MyModel {field1?, field2?: b}
 ```
 #### Strict Definition Adherence
-By default, requests can contain extra information that is not described in the definition. If you need a strict adherence to the schema, add an exclamation mark (`!`) before the definitions, for example:
+By default, objects may contain extra fields that are not specified in the model. If you need a strict adherence to the schema, add an exclamation mark (`!`) before the definitions, for example:
 ```
 MyModel !{field1, field2}
 ```
@@ -105,13 +105,13 @@ As a result, `MyOtherModel` will have `field1` and `field3` values, but `field2`
 Your models may be multiline:
 ```
 MyModel {
-    field1: integer;
-    field2: boolean;
+    field1,
+    field2: b
 }
 ```
 
 ### Endpoints (Paths) Definition
-Endpoints (_paths_) are described in `endpoints.tinyspec` files. As with models definitions, you can split endpoint definitions into multiple `*.endpoints.tinyspec` files or place them in folders to make the documentation easier to maintain.
+Endpoints (_paths_) are described in `endpoints.tinyspec` files. As with models definitions, you can split endpoint definitions into multiple `*.endpoints.tinyspec` files or place them in folders to make the specification easier to maintain.
 
 The basic endpoint definition looks like this:
 ```
@@ -130,18 +130,18 @@ To specify _query parameters_, add the question mark (`?`) after the path and li
 You can add multiple parameters by connecting them with the ampersand symbol (`&`).
 
 _Responses_ are specified below the endpoint definitions prefixed with an indent and `=>` sign. You can specify status before the response definition, otherwise the status `200` is used by default.
-You can also provide a response description using a `//` comment.
+You can also provide a response description using prefixed with `//`.
 
 Parameters and responses definition format is the same as for models. For example, you can refer to other models, make some parameters optional or specify the required data type:
 ```
-GET /examples?sort&limit?:i
+GET /examples?sort&limit?=i
     => {examples: Example[], totalCount?: i}
     // Response description
     => 404 NotFoundError
 ```
 
 #### Endpoints Description
-To create a description for the endpoint, add a `//` comment before its specification. This description supports Markdown. Here is how it looks like:
+To create a description for the endpoint, add `//`-prefixed line before its definition. This description supports Markdown. Here is how it looks like:
 ```
 // Get **ALL** objects.
 GET /examples
@@ -156,7 +156,7 @@ $CRUDL /examples
 ```
 This tiny piece would be an equivalent to:
 ```
-// **List** available _examples_
+// **List** _examples_
 GET /examples
     => {examples: Example[]}
 
@@ -164,29 +164,29 @@ GET /examples
 POST /examples {example: ExampleNew}
     => 201 {example: Example}
 
-// **Retrieve** particular _example_
+// **Retrieve** _example_
 GET /examples/:id
     => {example: Example}
 
-// **Update** particular _example_
+// **Update** _example_
 PATCH /examples/:id {example: ExampleUpdate}
     => {example: Example}
 
-// **Delete** particular _example_
+// **Delete** _example_
 DELETE /examples/:id
     => {success: b}
 ```
 
 If you only need some methods, omit the key you do not need (for example `$RD` will only create _retrieve_ and _delete_ actions).
 
-By default the last _path_ member is used for model name and payload keys (see above).
-Alternatively, you can specify your own key and model name. You can also add postfix `$` to the model name to append `*New` and `*Update` postfixes in corresponding endpoints:
+By default the last _path_ member is used to produce model name and payload keys (see above).
+Alternatively, you can specify your own key and model name. You can also add postfix `$` to the model name to append `*New` and `*Update` postfixes in generated endpoints:
 ```
 $CRUDL /examples {myKey: MyModel$}
 ```
 
 #### Authorization
-If your API uses authorization, describe the authorization method in the `headers.yaml` file and then address it in before the endpoint definition by using the at sign (`@`). For example:
+If your API uses authorization, describe the authorization method in the `headers.yaml` file and then address it before the endpoint definition by using the "at" sign (`@`). For example:
 ```
 // header.yaml
 securityDefinitions:
@@ -201,7 +201,7 @@ securityDefinitions:
 ```
 
 #### Endpoint Tags
-Tags let you group endpoints by the parameter you need. For example you can group your endpoints by your API clients type or role.
+Tags let you group endpoints by the parameter you need. For example you can group your endpoints by your API client type or role.
 To create a tag, add it with semicolon (`:`) before the definition. For example, to create the `Admin` endpoints group:
 ```
 Admin:
@@ -217,7 +217,7 @@ Guest endpoints:
         => {articles: Article[]}
 
 Admin endpoints:
-    GET /articles (admin)?filter&sort&limit:i
+    GET /articles (admin)?filter&sort&limit=i
         => {articles: Article[], totalCount: i}
 ```
 
@@ -252,7 +252,7 @@ To generate the documentation for GitHub pages from the existing project:
     "docs": "tinyspec -h -o ../docs/"
   }
 ```
-* Execute the `npm run docs` command, commits and push changes and check out your GitHub static website.
+* Execute the `npm run docs` command, commit and push changes and check out your GitHub static website.
 
 For more information about GitHub Pages, [see this article](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/).
 
