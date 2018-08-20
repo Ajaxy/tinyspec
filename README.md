@@ -12,13 +12,14 @@
 - [Generating Documentation](#generating-documentation)
     - [Using With GitHub Pages](#generating-documentation-for-existing-projects-with-support-of-github-pages)
     - [Using With Asciidoctor](#using-with-asciidoctor)
+    - [Tinyspec Cloud](#tinyspec-cloud)
 - [Contributing](#contributing)
 
 ## About
 
 Tinyspec offers a lightweight and human-readable alternative to the more verbose [OpenAPI/Swagger](https://github.com/OAI/OpenAPI-Specification) format. It relies on the strengths of the OpenAPI format without the need to maintain the single large JSON or YAML file or to use some special software, instead allowing you to keep your API endpoints and models in separate and easy to maintain files.
 
-Possible outputs include a full OpenAPI definition in YAML and JSON formats, or the API description in HTML format created with the help of the [bootprint-openapi](https://github.com/bootprint/bootprint-openapi).
+Possible outputs include a full OpenAPI specification in YAML and JSON formats, or the API documentation in HTML format created with the help of the [bootprint-openapi](https://github.com/bootprint/bootprint-openapi).
 
 
 ## Installing
@@ -259,6 +260,8 @@ For more information about GitHub Pages, [see this article](https://help.github.
 ### Using With Asciidoctor
 Check out [this repo](https://github.com/Ajaxy/openapi-asciidoctor) to produce even more beautiful HTML (and PDF) output.
 
+### Tinyspec Cloud
+[Tinyspec Cloud](https://tinyspec.cloud) is a documentation hosting service with a themes marketplace launching soon.
 
 ## Contributing
 Contributions and feedback are always welcome. If you have an idea on how to make tinyspec better, feel free to create an issue and/or pull request.
