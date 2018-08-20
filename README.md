@@ -1,4 +1,4 @@
-# tinyspec
+# <img src="docs/logo.png" width="170" title="tinyspec" alt="tinyspec" />
 [![NPM version](https://img.shields.io/npm/v/tinyspec.svg)](https://npmjs.com/package/tinyspec)
 
 - [About](#about)
