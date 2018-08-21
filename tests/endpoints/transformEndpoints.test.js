@@ -22,4 +22,10 @@ describe('Endpoints to OpenAPI paths', () => {
       expect(transformEndpoints(source)).toEqual(expectation);
     });
   });
+
+  it('Invalid definition', () => {
+    const source = fs.readFileSync(`${__dirname}/sources/invalidDefinition.endpoints.tinyspec`, { encoding: 'utf-8' });
+
+    expect(() => transformEndpoints(source)).toThrowError('Invalid definition: `Invalid definition`');
+  });
 });

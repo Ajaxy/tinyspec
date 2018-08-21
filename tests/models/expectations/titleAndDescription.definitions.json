@@ -1,0 +1,30 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "title": "Title and description",
+      "description": "Title and description",
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "a"
+      ]
+    },
+    "MyModel2": {
+      "title": "Title",
+      "description": "Title\n\nand multi-line\n\ndescription",
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "a"
+      ]
+    }
+  }
+}

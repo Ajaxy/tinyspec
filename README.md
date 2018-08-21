@@ -103,13 +103,20 @@ MyOtherModel < MyModel {-field2, field3}
 ```
 As a result, `MyOtherModel` will have `field1` and `field3` values, but `field2` will be excluded.
 
-#### Multiline Models
-Your models may be multiline:
+#### Multi-line Models
+Your models may be multi-line:
 ```
 MyModel {
     field1,
     field2: b
 }
+```
+
+#### Models Description
+To create a description for the model, add a text line prefixed with `//` before its definition. Description may be multi-line and supports Markdown. Here is how it looks like:
+```
+// My _perfect_ tiny model
+MyModed {field}
 ```
 
 ### Endpoints (Paths) Definition
@@ -132,7 +139,7 @@ To specify _query parameters_, add the question mark (`?`) after the path and li
 You can add multiple parameters by connecting them with the ampersand symbol (`&`).
 
 _Responses_ are specified below the endpoint definitions prefixed with an indent and `=>` sign. You can specify status before the response definition, otherwise the status `200` is used by default.
-You can also provide a response description using prefixed with `//`.
+You can also provide a response description using a text line prefixed with `//`.
 
 Parameters and responses definition format is the same as for models. For example, you can refer to other models, make some parameters optional or specify the required data type:
 ```
@@ -143,7 +150,7 @@ GET /examples?sort&limit?=i
 ```
 
 #### Endpoints Description
-To create a description for the endpoint, add `//`-prefixed line before its definition. This description supports Markdown. Here is how it looks like:
+To create a description for the endpoint, add a text line prefixed with `//` before its definition. Description may be multi-line and supports Markdown. Here is how it looks like:
 ```
 // Get **ALL** objects.
 GET /examples

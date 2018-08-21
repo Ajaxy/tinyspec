@@ -15,6 +15,7 @@ const tests = [
   'Comments',
   'Multiline',
   'Different code styles',
+  'Title and description',
 ];
 
 describe('Models to OpenAPI definitions', () => {
@@ -35,5 +36,11 @@ describe('Models to OpenAPI definitions', () => {
     const expectation = require(`${__dirname}/expectations/optionalPropsWithAddNulls.definitions.json`);
 
     expect(transformModels(source, { addNulls: true })).toEqual(expectation);
+  });
+
+  it('Invalid definition', () => {
+    const source = fs.readFileSync(`${__dirname}/sources/invalidDefinition.models.tinyspec`, { encoding: 'utf-8' });
+
+    expect(() => transformModels(source)).toThrowError('Invalid definition: `Invalid definition`');
   });
 });
