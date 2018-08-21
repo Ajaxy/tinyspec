@@ -13,6 +13,7 @@
     - [Using With GitHub Pages](#generating-documentation-for-existing-projects-with-support-of-github-pages)
     - [Using With Asciidoctor](#using-with-asciidoctor)
     - [Tinyspec Cloud](#tinyspec-cloud)
+- [OpenAPI version](#openapi-version)
 - [Contributing](#contributing)
 
 ## About
@@ -262,6 +263,9 @@ Check out [this repo](https://github.com/Ajaxy/openapi-asciidoctor) to produce e
 
 ### Tinyspec Cloud
 [Tinyspec Cloud](https://tinyspec.cloud) is a documentation hosting service with a themes marketplace launching soon.
+
+## OpenAPI version
+The current version of tinyspec produces Swagger/OpenAPI 2.0. The new 3.0 version has got some nice features there, but is not well supported by most third-party tools yet. The compatibility with OpenAPI 3.0 is to be added in future.
 
 ## Contributing
 Contributions and feedback are always welcome. If you have an idea on how to make tinyspec better, feel free to create an issue and/or pull request.
