@@ -1,0 +1,2 @@
+POST /myEndpoint {a: {b: {c}}}
+    => {d: {e: {f}}}

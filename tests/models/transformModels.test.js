@@ -16,6 +16,7 @@ const tests = [
   'Multiline',
   'Different code styles',
   'Title and description',
+  'Nested objects',
 ];
 
 describe('Models to OpenAPI definitions', () => {

@@ -7,7 +7,7 @@
         "z"
       ]
     },
-    "MyModel1": {
+    "MyModel2": {
       "type": "object",
       "properties": {
         "a": {

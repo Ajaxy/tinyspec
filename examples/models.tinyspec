@@ -14,8 +14,9 @@ ColorUpdate !{name?, code?}
 
 # Multi-line definition
 ColorExtended < Color {
-    id: integer;
-    createdAt: datetime;
-    updatedAt?: datetime;
-    primaryChannel: (red|green|blue); # Enum-field
+    id: i,
+    createdAt: d,
+    updatedAt?: d,
+    channels: {red: i, green: i, blue: i}, # Nested object
+    primaryChannel: (red|green|blue) # Enum-field
 }

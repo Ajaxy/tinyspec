@@ -1,0 +1,119 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "object",
+          "properties": {
+            "b": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "b"
+          ]
+        },
+        "c": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "a",
+        "c"
+      ]
+    },
+    "MyModel2": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "object",
+          "properties": {
+            "b": {
+              "type": "object",
+              "properties": {
+                "c": {
+                  "type": "boolean"
+                },
+                "d": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "c",
+                "d"
+              ]
+            },
+            "e": {
+              "type": "object",
+              "properties": {
+                "f": {
+                  "type": "string"
+                },
+                "g": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "f",
+                "g"
+              ]
+            }
+          },
+          "required": [
+            "e"
+          ]
+        },
+        "h": {
+          "type": "object",
+          "properties": {
+            "i": {
+              "type": "string"
+            },
+            "j": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "i",
+            "j"
+          ]
+        }
+      },
+      "required": [
+        "a",
+        "h"
+      ]
+    },
+    "MyModel3": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "b": {
+                "type": "object",
+                "properties": {
+                  "c": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "c"
+                ]
+              }
+            },
+            "required": [
+              "b"
+            ]
+          }
+        }
+      },
+      "required": [
+        "a"
+      ]
+    }
+  }
+}

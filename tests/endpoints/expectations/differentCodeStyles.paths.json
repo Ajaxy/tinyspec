@@ -23,8 +23,7 @@
           "404": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/NotFoundError",
-              "required": true
+              "$ref": "#/definitions/NotFoundError"
             }
           }
         },

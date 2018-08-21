@@ -1,0 +1,11 @@
+MyModel1 {a: {b}, c}
+
+MyModel2 {a: {b?: {c: b, d}, e: {f, g: i}}, h: {i, j}}
+
+MyModel3 {
+    a: {
+        b: {
+            c
+        }
+    }[]
+}

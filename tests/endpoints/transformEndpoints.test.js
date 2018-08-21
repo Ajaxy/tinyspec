@@ -9,6 +9,7 @@ const tests = [
   'CRUDL basic',
   'CRUDL custom models',
   'CRUDL override',
+  'Nested objects',
 ];
 
 describe('Endpoints to OpenAPI paths', () => {

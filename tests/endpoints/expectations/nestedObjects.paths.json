@@ -1,0 +1,78 @@
+{
+  "paths": {
+    "/myEndpoint": {
+      "post": {
+        "summary": "POST /myEndpoint",
+        "description": "POST /myEndpoint",
+        "operationId": "POST--myEndpoint",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "object",
+                  "properties": {
+                    "b": {
+                      "type": "object",
+                      "properties": {
+                        "c": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "c"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "b"
+                  ]
+                }
+              },
+              "required": [
+                "a"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "d": {
+                  "type": "object",
+                  "properties": {
+                    "e": {
+                      "type": "object",
+                      "properties": {
+                        "f": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "f"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "e"
+                  ]
+                }
+              },
+              "required": [
+                "d"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}
