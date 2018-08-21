@@ -89,26 +89,23 @@
       "type": "object",
       "properties": {
         "a": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "b": {
-                "type": "object",
-                "properties": {
-                  "c": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "c"
-                ]
-              }
-            },
-            "required": [
-              "b"
-            ]
-          }
+          "type": "object",
+          "properties": {
+            "b": {
+              "type": "object",
+              "properties": {
+                "c": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "c"
+              ]
+            }
+          },
+          "required": [
+            "b"
+          ]
         }
       },
       "required": [

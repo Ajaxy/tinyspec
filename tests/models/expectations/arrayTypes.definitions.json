@@ -20,6 +20,44 @@
         "a",
         "b"
       ]
+    },
+    "MyModel2": {
+      "type": "object",
+
+      "properties": {
+        "a": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "x",
+              "y",
+              "z"
+            ]
+          }
+        },
+        "b": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "c": {
+                "type": "string"
+              },
+              "d": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "c",
+              "d"
+            ]
+          }
+        }
+      },
+      "required": [
+        "a",
+        "b"
+      ]
     }
   }
 }
