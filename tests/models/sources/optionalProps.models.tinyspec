@@ -1,2 +1,5 @@
 MyModel1 {a?, b, c?: (x | y | z)}
+
 MyModel2 {a?: MyModel1, b, c?: MyModel1[]}
+
+MyModel3 {a?: {b, c?}}

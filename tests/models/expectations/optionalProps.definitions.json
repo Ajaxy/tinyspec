@@ -40,6 +40,25 @@
       "required": [
         "b"
       ]
+    },
+    "MyModel3": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "object",
+          "properties": {
+            "b": {
+              "type": "string"
+            },
+            "c": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "b"
+          ]
+        }
+      }
     }
   }
 }

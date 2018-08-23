@@ -1,2 +1,3 @@
 MyModel1 {a}
+
 MyModel2 {a: MyModel1[]}

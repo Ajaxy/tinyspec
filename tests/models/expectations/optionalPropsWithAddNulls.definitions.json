@@ -64,6 +64,35 @@
       "required": [
         "b"
       ]
+    },
+    "MyModel3": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "b": {
+                  "type": "string"
+                },
+                "c": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "b"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
     }
   }
 }
