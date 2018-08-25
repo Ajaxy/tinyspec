@@ -8,3 +8,7 @@ MyModel4 < MyModel3
 
 # Edge case: all optional props and removal indicator
 MyModel5 < MyModel3 {-a, b?}
+
+# Edge case: inheritance of a model with `?` and `!`
+MyModel6 !?{a}
+MyModel7 < MyModel6 {b}

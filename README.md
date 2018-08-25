@@ -86,6 +86,11 @@ To mark the field as optional, add a question mark (`?`) after the field name, f
 ```
 MyModel {field1?, field2?: b}
 ```
+You can force all fields to be optional, just place `?` before their definition:
+```
+MyModel ?{field1, field2: b}
+```
+
 #### Strict Definition Adherence
 By default, objects may contain extra fields that are not specified in the model. If you need a strict adherence to the schema, add an exclamation mark (`!`) before the definitions, for example:
 ```

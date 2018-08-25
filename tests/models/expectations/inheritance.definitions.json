@@ -82,6 +82,29 @@
           "type": "string"
         }
       }
+    },
+    "MyModel6": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "MyModel7": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        },
+        "b": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "b"
+      ]
     }
   }
 }

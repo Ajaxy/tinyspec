@@ -1,0 +1,4 @@
+MyModel1 ?{a, b, c}
+
+# Edge case: using '?' with '!'
+MyModel2 ?!{a, b, c}

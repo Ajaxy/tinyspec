@@ -17,6 +17,7 @@ const tests = [
   'Different code styles',
   'Title and description',
   'Nested objects',
+  'All optional props',
 ];
 
 describe('Models to OpenAPI definitions', () => {
@@ -35,6 +36,14 @@ describe('Models to OpenAPI definitions', () => {
     const source = fs.readFileSync(`${__dirname}/sources/optionalProps.models.tinyspec`, { encoding: 'utf-8' });
     // eslint-disable-next-line global-require, import/no-dynamic-require
     const expectation = require(`${__dirname}/expectations/optionalPropsWithAddNulls.definitions.json`);
+
+    expect(transformModels(source, { addNulls: true })).toEqual(expectation);
+  });
+
+  it('All optional props with `options.addNulls = true`', () => {
+    const source = fs.readFileSync(`${__dirname}/sources/allOptionalProps.models.tinyspec`, { encoding: 'utf-8' });
+    // eslint-disable-next-line global-require, import/no-dynamic-require
+    const expectation = require(`${__dirname}/expectations/allOptionalPropsWithAddNulls.definitions.json`);
 
     expect(transformModels(source, { addNulls: true })).toEqual(expectation);
   });
