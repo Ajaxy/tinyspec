@@ -1,4 +1,4 @@
-MyModel1 !{a, b, c?, d?, e: b, f}
+MyModel1 {a, b, c?, d?, e: b, f}
 MyModel2 < MyModel1 {-b, d, e: MyModel1, f?, g}
 
 MyModel3 {a?}
@@ -9,6 +9,6 @@ MyModel4 < MyModel3
 # Edge case: all optional props and removal indicator
 MyModel5 < MyModel3 {-a, b?}
 
-# Edge case: inheritance of a model with `?` and `!`
-MyModel6 !?{a}
+# Edge case: inheritance of a model with `!`
+MyModel6 !{a}
 MyModel7 < MyModel6 {b}
