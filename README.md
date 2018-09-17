@@ -47,7 +47,7 @@ The basic model looks like this:
 ```
 MyModel {field1, field2}
 ```
-You can describe any number of models in a single `*.models.tinyspec` file. Fields should be separated by `,` or `;`. By default, all fields are required and accept `string` data values.
+You can describe any number of models in a single `*.models.tinyspec` file. Fields should be separated by `,`. By default, all fields are required and accept `string` data values.
 
 #### Data Types
 To specify the expected data type, add it after semicolon (`:`). To make fields accept arrays, add brackets (`[]`). For example to define an object:
@@ -143,7 +143,7 @@ You can also provide a response description using a text line prefixed with `//`
 
 Parameters and responses definition format is the same as for models. For example, you can refer to other models, make some parameters optional or specify the required data type:
 ```
-GET /examples?sort&limit?=i
+GET /examples?sort&limit?:i
     => {examples: Example[], totalCount?: i}
     // Response description
     => 404 NotFoundError
@@ -226,7 +226,7 @@ Guest endpoints:
         => {articles: Article[]}
 
 Admin endpoints:
-    GET /articles (admin)?filter&sort&limit=i
+    GET /articles (admin)?filter&sort&limit:i
         => {articles: Article[], totalCount: i}
 ```
 

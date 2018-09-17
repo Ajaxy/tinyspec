@@ -1,10 +1,8 @@
 My tag:
   # 2-spaces indent
   // Update resources
-  # `:` instead of `=` before query param type
-  # `;` as a delimiter in body params
   # No spaces in props
-  @token PATCH /parent/:a/resources/:b (variant)?c&d?&e:boolean {f;g?;h:i[]}
+  @token PATCH /parent/:a/resources/:b (variant)?c&d?&e:boolean {f,g?,h:i[]}
 
   # No indent in responses
   => 200 { resource: Resource } # Spaces around braces

@@ -1,7 +1,6 @@
 # No spaces after model name
-# `;` as a delimiter
 # Trailing delimiter
-MyModel1{a;b:i;c:(x|y);}
+MyModel1{a,b:i,c:(x|y),}
 
 # Extra spaces after enum model name
 # No spaces between enum values
