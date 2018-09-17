@@ -1,0 +1,5 @@
+GET /myEndpoint1?MyModel
+    => {success: b}
+
+GET /myEndpoint2?a:MyModel
+    => {success: b}

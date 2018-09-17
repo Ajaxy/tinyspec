@@ -1,0 +1,69 @@
+{
+  "paths": {
+    "/myEndpoint1": {
+      "get": {
+        "summary": "GET /myEndpoint1",
+        "description": "GET /myEndpoint1",
+        "operationId": "GET--myEndpoint1",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "...",
+            "required": true,
+            "type": "string",
+            "in": "query",
+            "description": "Schema: [`MyModel`](#_mymodel) (stringified)"
+          }
+        ]
+      }
+    },
+    "/myEndpoint2": {
+      "get": {
+        "summary": "GET /myEndpoint2",
+        "description": "GET /myEndpoint2",
+        "operationId": "GET--myEndpoint2",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "a",
+            "required": true,
+            "type": "string",
+            "in": "query",
+            "description": "Schema: [`MyModel`](#_mymodel) (stringified)"
+          }
+        ]
+      }
+    }
+  },
+  "tags": []
+}
