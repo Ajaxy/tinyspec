@@ -25,7 +25,8 @@
                       },
                       "required": [
                         "c"
-                      ]
+                      ],
+                      "additionalProperties": false
                     }
                   },
                   "required": [
@@ -67,7 +68,8 @@
               },
               "required": [
                 "d"
-              ]
+              ],
+              "additionalProperties": false
             }
           }
         }

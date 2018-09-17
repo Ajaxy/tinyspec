@@ -1,2 +1,2 @@
-POST /myEndpoint {a: {b: {c}}}
-    => {d: {e: {f}}}
+POST /myEndpoint {a: {b: !{c}}}
+    => !{d: {e: {f}}}

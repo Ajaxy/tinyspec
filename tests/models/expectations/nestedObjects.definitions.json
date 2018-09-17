@@ -111,6 +111,26 @@
       "required": [
         "a"
       ]
+    },
+    "MyModel4": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "object",
+          "properties": {
+            "b": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "b"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "a"
+      ]
     }
   }
 }

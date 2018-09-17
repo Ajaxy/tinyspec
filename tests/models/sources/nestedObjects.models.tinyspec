@@ -9,3 +9,6 @@ MyModel3 {
         }
     }
 }
+
+# No extra props in a nested object
+MyModel4 {a: !{b}}
