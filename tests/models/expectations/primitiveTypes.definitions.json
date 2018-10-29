@@ -32,14 +32,15 @@
         },
         "j": {
           "type": "string",
-          "format": "date-time"
+          "format": "date"
         },
         "k": {
           "type": "string",
           "format": "date-time"
         },
         "l": {
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "m": {
           "type": "string"
@@ -51,9 +52,12 @@
           "type": "string"
         },
         "p": {
-          "type": "object"
+          "type": "string"
         },
         "q": {
+          "type": "object"
+        },
+        "r": {
           "type": "object"
         }
       },
@@ -74,7 +78,8 @@
         "n",
         "o",
         "p",
-        "q"
+        "q",
+        "r"
       ]
     },
     "MyModel2": {

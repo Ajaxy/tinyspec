@@ -1,4 +1,4 @@
-MyModel1 {a, b: s, c: string, d: i, e: integer, f: f, g: float, h: b, i: boolean, j: d, k: datetime, l: t, m: text, n: j, o: json, p: o, q: object}
+MyModel1 {a, b: s, c: string, d: i, e: integer, f: f, g: float, h: b, i: boolean, j: date, k: d, l: datetime, m: t, n: text, o: j, p: json, q: o, r: object}
 
 # Edge case: prop names like types or type symbols
 MyModel2 {string, integer, float, b, d, t, j, o}
