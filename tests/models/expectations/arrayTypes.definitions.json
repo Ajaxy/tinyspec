@@ -58,6 +58,44 @@
         "a",
         "b"
       ]
+    },
+    "MyModel3": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "array",
+          "items": {
+            "type": "array", 
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "required": [
+        "a"
+      ]
+    },
+    "MyModel4": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "array",
+          "items": {
+            "type": "array", 
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MyModel1"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "a"
+      ]
     }
+
   }
 }

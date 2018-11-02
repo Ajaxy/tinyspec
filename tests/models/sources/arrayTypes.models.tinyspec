@@ -1,3 +1,7 @@
 MyModel1 {a: s[], b: integer[]}
 
 MyModel2 {a: (x | y | z)[], b: {c, d}[]}
+
+MyModel3 {a: integer[][]}
+
+MyModel4 {a: MyModel1[][][]}
