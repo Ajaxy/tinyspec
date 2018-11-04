@@ -63,6 +63,7 @@ Shorthand|Full|OpenAPI type|OpenAPI format|
 `b`| `boolean`
 `o`| `object`
 `f`| `float` | `number`
+(none) | `date` | `string` | `date`
 `d`| `datetime` | `string` | `date-time`
 `t`| `text` | `string`
 `j`| `json` | `string`
