@@ -1,5 +1,7 @@
 :mega: Read an article about [Specification-driven development](https://www.toptal.com/api-developers/5-new-things-rest-specification) of REST APIs.
 
+:cloud: Deploy your OpenAPI spec to [Tinyspec Cloud Beta](https://github.com/Ajaxy/tinyspec-cloud) to generate and host beautiful REST API documentation.
+
 # <img src="docs/logo.png" width="165" title="tinyspec" alt="tinyspec" />
 
 [![NPM version](https://img.shields.io/npm/v/tinyspec.svg)](https://npmjs.com/package/tinyspec)
