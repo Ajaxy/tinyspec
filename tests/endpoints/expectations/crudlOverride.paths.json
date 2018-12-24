@@ -26,7 +26,7 @@
         }
       }
     },
-    "/my1Resources/:id": {
+    "/my1Resources/{id}": {
       "get": {
         "summary": "**Retrieve** _my1Resource_",
         "description": "**Retrieve** _my1Resource_",

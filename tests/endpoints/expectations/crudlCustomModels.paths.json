@@ -65,7 +65,7 @@
         ]
       }
     },
-    "/my1Resources/:id": {
+    "/my1Resources/{id}": {
       "get": {
         "summary": "**Retrieve** _customKey_",
         "description": "**Retrieve** _customKey_",
@@ -235,7 +235,7 @@
         ]
       }
     },
-    "/my2Resources/:id": {
+    "/my2Resources/{id}": {
       "get": {
         "summary": "**Retrieve** _customKey_",
         "description": "**Retrieve** _customKey_",
@@ -405,7 +405,7 @@
         ]
       }
     },
-    "/my3Resources/:id": {
+    "/my3Resources/{id}": {
       "get": {
         "summary": "**Retrieve** _my3Resource_",
         "description": "**Retrieve** _my3Resource_",

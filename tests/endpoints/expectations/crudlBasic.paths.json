@@ -65,7 +65,7 @@
         ]
       }
     },
-    "/my1Resources/:id": {
+    "/my1Resources/{id}": {
       "get": {
         "summary": "**Retrieve** _my1Resource_",
         "description": "**Retrieve** _my1Resource_",
@@ -211,7 +211,7 @@
         ]
       }
     },
-    "/my2Resources/:id": {
+    "/my2Resources/{id}": {
       "delete": {
         "summary": "**Delete** _my2Resource_",
         "description": "**Delete** _my2Resource_",

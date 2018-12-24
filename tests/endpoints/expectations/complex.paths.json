@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/parent/:a/resources/:b (variant)": {
+    "/parent/{a}/resources/{b} (variant)": {
       "patch": {
         "summary": "Update resources",
         "description": "Update resources",
