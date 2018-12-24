@@ -1,0 +1,27 @@
+# Regular model
+User {id: i, name, email, favoriteColors?: Color[]}
+
+# Creation data: no extra fields allowed
+UserNew !{name, email}
+
+UserUpdate !{name?, email?, favoriteColorIds?: i[]}
+
+Color {name, code}
+
+ColorNew !{name, code}
+
+ColorUpdate !{name?, code?}
+
+# Multi-line definition
+ColorExtended < Color {
+    id: i,
+    createdAt: d,
+    updatedAt?: d,
+    channels: {red: i, green: i, blue: i}, # Nested object
+    primaryChannel: (red|green|blue) # Enum-field
+}
+
+Resource {a}
+
+Error {code, message}
+NotFoundError < Error
