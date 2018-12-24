@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 const _ = require('lodash');
 const YAML = require('yamljs');
 const { argv } = require('yargs');
@@ -19,8 +18,7 @@ try {
 }
 /* eslint-enable global-require, import/no-unresolved */
 
-const transformEndpoints = require('./lib/transformEndpoints');
-const transformModels = require('./lib/transformModels');
+const parseProject = require('./lib/parseProject');
 
 const TARGET_YAML_FILE = 'openapi.yaml';
 const TARGET_JSON_FILE = 'openapi.json';
@@ -40,11 +38,11 @@ if (argv.yaml || argv.y) {
 
 switch (mode) {
   case 'yaml': {
-    fs.writeFileSync(path.join(srcDir, outputDir, TARGET_YAML_FILE), generateYaml());
+    fs.writeFileSync(path.join(srcDir, outputDir, TARGET_YAML_FILE), parseProject(srcDir));
     break;
   }
   case 'json': {
-    generateJson(generateYaml(), path.join(srcDir, outputDir, TARGET_JSON_FILE));
+    generateJson(parseProject(srcDir), path.join(srcDir, outputDir, TARGET_JSON_FILE));
     break;
   }
   case 'html': {
@@ -61,7 +59,7 @@ switch (mode) {
     const jsonFilePath = path.join(srcDir, TARGET_JSON_FILE);
     const needCleanup = !fs.existsSync(jsonFilePath);
 
-    generateJson(generateYaml(), jsonFilePath);
+    generateJson(parseProject(srcDir), jsonFilePath);
     generateHtml(jsonFilePath, outputDir)
       .then(() => {
         if (needCleanup) {
@@ -88,22 +86,6 @@ Options:
     );
     break;
   }
-}
-
-function generateYaml() {
-  const pattern = path.join(srcDir, '**', '@(*models.tinyspec|*endpoints.tinyspec|header.yaml)');
-  const filePaths = glob.sync(pattern, { ignore: path.join(srcDir, '**/node_modules/**') });
-  const byType = _.groupBy(filePaths, filePath => filePath.match(/\w+\.\w+$/)[0]);
-  const header = fs.readFileSync(byType['header.yaml'][0], 'utf-8');
-  const models = byType['models.tinyspec'].map(filePath => fs.readFileSync(filePath)).join('\n\n');
-  const endpoints = byType['endpoints.tinyspec'].map(filePath => fs.readFileSync(filePath)).join('\n\n');
-
-  const { addNulls } = argv;
-
-  const pathsYaml = YAML.stringify(transformEndpoints(endpoints), Infinity, 2);
-  const definitionsYaml = YAML.stringify(transformModels(models, { addNulls }), Infinity, 2);
-
-  return [header, pathsYaml, definitionsYaml].join('\n');
 }
 
 function generateJson(yamlSpec, target) {

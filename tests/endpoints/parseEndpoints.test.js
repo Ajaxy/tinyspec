@@ -1,6 +1,6 @@
 const fs = require('fs');
 const _ = require('lodash');
-const transformEndpoints = require('../../lib/transformEndpoints');
+const parseEndpoints = require('../../lib/parseEndpoints');
 
 const tests = [
   'Basic',
@@ -21,13 +21,13 @@ describe('Endpoints to OpenAPI paths', () => {
     const expectation = require(`${__dirname}/expectations/${key}.paths.json`);
 
     it(name, () => {
-      expect(transformEndpoints(source)).toEqual(expectation);
+      expect(parseEndpoints(source)).toEqual(expectation);
     });
   });
 
   it('Invalid definition', () => {
     const source = fs.readFileSync(`${__dirname}/sources/invalidDefinition.endpoints.tinyspec`, { encoding: 'utf-8' });
 
-    expect(() => transformEndpoints(source)).toThrowError('Invalid definition: `Invalid definition`');
+    expect(() => parseEndpoints(source)).toThrowError('Invalid definition: `Invalid definition`');
   });
 });

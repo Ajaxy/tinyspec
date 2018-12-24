@@ -1,6 +1,6 @@
 const fs = require('fs');
 const _ = require('lodash');
-const transformModels = require('../../lib/transformModels');
+const parseModels = require('../../lib/parseModels');
 
 const tests = [
   'Primitive types',
@@ -27,7 +27,7 @@ describe('Models to OpenAPI definitions', () => {
     const expectation = require(`${__dirname}/expectations/${key}.definitions.json`);
 
     it(name, () => {
-      expect(transformModels(source)).toEqual(expectation);
+      expect(parseModels(source)).toEqual(expectation);
     });
   });
 
@@ -36,12 +36,12 @@ describe('Models to OpenAPI definitions', () => {
     // eslint-disable-next-line global-require, import/no-dynamic-require
     const expectation = require(`${__dirname}/expectations/optionalPropsWithAddNulls.definitions.json`);
 
-    expect(transformModels(source, { addNulls: true })).toEqual(expectation);
+    expect(parseModels(source, { addNulls: true })).toEqual(expectation);
   });
 
   it('Invalid definition', () => {
     const source = fs.readFileSync(`${__dirname}/sources/invalidDefinition.models.tinyspec`, { encoding: 'utf-8' });
 
-    expect(() => transformModels(source)).toThrowError('Invalid definition: `Invalid definition`');
+    expect(() => parseModels(source)).toThrowError('Invalid definition: `Invalid definition`');
   });
 });
