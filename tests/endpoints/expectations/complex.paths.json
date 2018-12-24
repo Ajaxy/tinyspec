@@ -4,7 +4,7 @@
       "patch": {
         "summary": "Update resources",
         "description": "Update resources",
-        "operationId": "PATCH--parent--a--resources--b--variant",
+        "operationId": "PATCH--parent--a--resources--b--integer--variant",
         "responses": {
           "200": {
             "description": "",
@@ -40,7 +40,7 @@
           {
             "name": "b",
             "required": true,
-            "type": "string",
+            "type": "integer",
             "in": "path"
           },
           {
