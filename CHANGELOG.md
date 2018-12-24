@@ -1,5 +1,10 @@
 ## Change Log
 
+### v2.1.0 (2018/12/24 14:44 +00:00)
+- [e07ebc1](https://github.com/Ajaxy/tinyspec/commit/e07ebc172d4aedf3afeb4aa88871bc45126f44dc) Fix body parameters redundant attributes
+- [45863f0](https://github.com/Ajaxy/tinyspec/commit/45863f01f4a2e9ea78641c662f70c54b157223f3) Fix path params to match Swagger spec (`:id` => `{id}`)
+- [c16f20e](https://github.com/Ajaxy/tinyspec/commit/c16f20e0ffe4a5d65e49878ce767dcc089907a15) Add integration test to validate agains official Swagger spec
+
 ### v2.1.0 (2018/11/12 19:54 +00:00)
 - [d21336a](https://github.com/Ajaxy/tinyspec/commit/d21336ad33cfdd9209676d575ef95f322d746aa6) Add link to Tinyspec Cloud (@Ajaxy)
 - [#10](https://github.com/Ajaxy/tinyspec/pull/10) Support for multi-dimensional collections (arrays) (@sojournerc, @Ajaxy)
