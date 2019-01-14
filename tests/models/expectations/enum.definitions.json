@@ -27,6 +27,13 @@
       "required": [
         "a"
       ]
+    },
+    "MyModel3": {
+      "enum": [
+        "xxx:yyy",
+        "xxx-yyy",
+        "xxx yyy zzz"
+      ]
     }
   }
 }
