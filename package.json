@@ -21,7 +21,8 @@
     "example:docs": "tinyspec -h -o docs/",
     "test": "jest",
     "lint": "eslint .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "changelog": "npx github-changes -o Ajaxy -r tinyspec -a --use-commit-body"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,7 @@
     "eslint": "^5.4.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "github-changes": "^1.1.2",
     "husky": "^0.14.3",
     "jest": "^23.5.0",
     "merge": "^1.2.1",
