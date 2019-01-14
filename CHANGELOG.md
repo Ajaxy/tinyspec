@@ -1,6 +1,6 @@
 ## Change Log
 
-### v2.2.1 (2019/01/14 22:26 +00:00)
+### v2.2.2 (2019/01/14 22:26 +00:00)
 - [addbac5](https://github.com/Ajaxy/tinyspec/commit/addbac552944ff661ff84be5f79f10dbcf5d0538) Security upgrade for `merge` (@Ajaxy)
 - [dfba309](https://github.com/Ajaxy/tinyspec/commit/dfba3094a4efc1b6e6750d24a90329d55cbe63a0) Fix for `:` in enum values (@Ajaxy)
 
