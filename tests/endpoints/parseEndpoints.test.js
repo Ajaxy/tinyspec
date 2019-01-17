@@ -11,6 +11,7 @@ const tests = [
   'CRUDL override',
   'Nested objects',
   'Model in query',
+  'Path params',
 ];
 
 describe('Endpoints to OpenAPI paths', () => {

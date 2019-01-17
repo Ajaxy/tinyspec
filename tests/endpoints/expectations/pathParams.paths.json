@@ -1,0 +1,121 @@
+{
+  "paths": {
+    "/myEndpoint/{a}": {
+      "get": {
+        "summary": "GET /myEndpoint/:a",
+        "description": "GET /myEndpoint/:a",
+        "operationId": "GET--myEndpoint--a",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "a",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/myEndpoint/{b}": {
+      "get": {
+        "summary": "GET /myEndpoint/:b:i",
+        "description": "GET /myEndpoint/:b:i",
+        "operationId": "GET--myEndpoint--b--i",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "b",
+            "type": "integer",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/{a}": {
+      "get": {
+        "summary": "GET /:a:i",
+        "description": "GET /:a:i",
+        "operationId": "GET--a--i",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "a",
+            "type": "integer",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/myEndpoint/x:y": {
+      "get": {
+        "summary": "GET /myEndpoint/x:y",
+        "description": "GET /myEndpoint/x:y",
+        "operationId": "GET--myEndpoint--x--y",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

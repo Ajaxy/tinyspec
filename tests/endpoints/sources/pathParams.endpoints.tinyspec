@@ -1,0 +1,14 @@
+GET /myEndpoint/:a
+    => {success: b}
+
+# Typed path parameter
+GET /myEndpoint/:b:i
+    => {success: b}
+
+# Edge case: Root endpoint
+GET /:a:i
+    => {success: b}
+
+# Edge case: A regular path containing semicolon
+GET /myEndpoint/x:y
+    => {success: b}
