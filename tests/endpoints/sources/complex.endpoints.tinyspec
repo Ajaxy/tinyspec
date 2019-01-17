@@ -2,6 +2,6 @@
 
 My tag:
     // Update resources
-    @token PATCH /parent/:a/resources/:b:integer (variant)?c&d?&e:boolean {f, g?, h: i[]}
+    updateResources = @token PATCH /parent/:a/resources/:b:integer (variant)?c&d?&e:boolean {f, g?, h: i[]}
         => 200 {resource: Resource} # Another comment
         => 404 NotFoundError
