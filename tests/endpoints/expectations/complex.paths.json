@@ -4,7 +4,7 @@
       "patch": {
         "summary": "Update resources",
         "description": "Update resources",
-        "operationId": "PATCH--parent--a--resources--b--integer--variant",
+        "operationId": "updateResources",
         "responses": {
           "200": {
             "description": "",
