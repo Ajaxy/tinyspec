@@ -4,7 +4,7 @@
       "get": {
         "summary": "**List** _my1Resources_",
         "description": "**List** _my1Resources_",
-        "operationId": "GET--my1Resources",
+        "operationId": "listMy1Resources",
         "responses": {
           "200": {
             "description": "",
@@ -30,7 +30,7 @@
       "get": {
         "summary": "**Retrieve** _my1Resource_",
         "description": "**Retrieve** _my1Resource_",
-        "operationId": "GET--my1Resources--id",
+        "operationId": "retrieveMy1Resource",
         "responses": {
           "200": {
             "description": "",

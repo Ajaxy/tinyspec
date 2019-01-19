@@ -4,7 +4,7 @@
       "get": {
         "summary": "**List** _my1Resources_",
         "description": "**List** _my1Resources_",
-        "operationId": "GET--my1Resources",
+        "operationId": "listMy1Resources",
         "responses": {
           "200": {
             "description": "",
@@ -28,7 +28,7 @@
       "post": {
         "summary": "**Create** new _my1Resource_",
         "description": "**Create** new _my1Resource_",
-        "operationId": "POST--my1Resources",
+        "operationId": "createMy1Resource",
         "responses": {
           "201": {
             "description": "",
@@ -69,7 +69,7 @@
       "get": {
         "summary": "**Retrieve** _my1Resource_",
         "description": "**Retrieve** _my1Resource_",
-        "operationId": "GET--my1Resources--id",
+        "operationId": "retrieveMy1Resource",
         "responses": {
           "200": {
             "description": "",
@@ -98,7 +98,7 @@
       "patch": {
         "summary": "**Update** _my1Resource_",
         "description": "**Update** _my1Resource_",
-        "operationId": "PATCH--my1Resources--id",
+        "operationId": "updateMy1Resource",
         "responses": {
           "200": {
             "description": "",
@@ -143,7 +143,7 @@
       "delete": {
         "summary": "**Delete** _my1Resource_",
         "description": "**Delete** _my1Resource_",
-        "operationId": "DELETE--my1Resources--id",
+        "operationId": "deleteMy1Resource",
         "responses": {
           "200": {
             "description": "",
@@ -174,7 +174,7 @@
       "post": {
         "summary": "**Create** new _my2Resource_",
         "description": "**Create** new _my2Resource_",
-        "operationId": "POST--my2Resources",
+        "operationId": "createMy2Resource",
         "responses": {
           "201": {
             "description": "",
@@ -215,7 +215,7 @@
       "delete": {
         "summary": "**Delete** _my2Resource_",
         "description": "**Delete** _my2Resource_",
-        "operationId": "DELETE--my2Resources--id",
+        "operationId": "deleteMy2Resource",
         "responses": {
           "200": {
             "description": "",
