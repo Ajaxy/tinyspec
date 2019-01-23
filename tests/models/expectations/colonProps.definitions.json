@@ -1,0 +1,32 @@
+{
+  "definitions": {
+    "MyModel1": {
+      "type": "object",
+      "properties": {
+        "a:prop": {
+          "type": "string"
+        },
+        "b:prop": {
+          "type": "string"
+        },
+        "c:prop": {
+          "type": "string"
+        },
+        "a:b:prop": {
+          "type": "string"
+        },
+        "a:c:prop": {
+          "type": "string"
+        },
+        "a:d:prop": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "a:prop",
+        "b:prop",
+        "c:prop"
+      ]
+    }
+  }
+}

@@ -17,6 +17,7 @@ const tests = [
   'Different code styles',
   'Title and description',
   'Nested objects',
+  'Colon props',
 ];
 
 describe('Models to OpenAPI definitions', () => {
