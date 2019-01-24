@@ -1,5 +1,10 @@
 ## Change Log
 
+### v2.3.0 (2019/01/24 14:28 +00:00)
+- [cac4348](https://github.com/Ajaxy/tinyspec/commit/cac4348574cf36af9f63d8949d3233dad210205b) 2.3.0 (@Ajaxy)
+- [#18](https://github.com/Ajaxy/tinyspec/pull/18) Added support for colons in prop names (@dichuvichkin)
+- [#15](https://github.com/Ajaxy/tinyspec/pull/15) Allow specifying Operation IDs (@pvgoran)
+
 ### v2.2.3 (2019/01/17 15:37 +00:00)
 - [d34c001](https://github.com/Ajaxy/tinyspec/commit/d34c00139f94d14b7db143f23879d6fd6e6d7077) 2.2.3 (@Ajaxy)
 - [5a025c4](https://github.com/Ajaxy/tinyspec/commit/5a025c449f56b9f2d7469efa9f1d221c8f7d4a4b) Fix paths containing semicolon (@Ajaxy)
