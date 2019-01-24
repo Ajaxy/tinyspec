@@ -1,8 +1,8 @@
 MyModel1 {
-    "a:prop": s,
-    "b:prop": string,
-    "c:prop",
-    "a:b:prop?": s,
-    "a:c:prop?": string,
-    "a:d:prop?"
+    a:prop: s,
+    b:prop: string,
+    c:prop: i,
+    a:b:prop?: s,
+    a:c:prop?: string,
+    a:d:prop?: d
 }

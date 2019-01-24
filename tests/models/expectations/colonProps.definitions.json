@@ -10,7 +10,7 @@
           "type": "string"
         },
         "c:prop": {
-          "type": "string"
+          "type": "integer"
         },
         "a:b:prop": {
           "type": "string"
@@ -19,7 +19,8 @@
           "type": "string"
         },
         "a:d:prop": {
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
