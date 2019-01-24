@@ -52,7 +52,8 @@ The basic model looks like this:
 ```
 MyModel {field1, field2}
 ```
-You can describe any number of models in a single `*.models.tinyspec` file. Fields should be separated by `,`. By default, all fields are required and accept `string` data values.
+You can describe any number of models in a single `*.models.tinyspec` file. Fields should be separated by `,`. By default, all fields are required and accept `string` data values. 
+But if you need a colon in the field name, you should specify the type explicitly.
 
 #### Data Types
 To specify the expected data type, add it after semicolon (`:`). To make fields accept arrays, add brackets (`[]`). For example to define an object:
