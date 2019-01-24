@@ -2,7 +2,12 @@ MyModel1 {
     a:prop: s,
     b:prop: string,
     c:prop: i,
+    a:b:c: {
+        d:e:f: {
+            e:g:h: s
+        }
+    },
     a:b:prop?: s,
     a:c:prop?: string,
-    a:d:prop?: d
+    a:d:prop?: d,
 }

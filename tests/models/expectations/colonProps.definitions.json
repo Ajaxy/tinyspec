@@ -12,6 +12,21 @@
         "c:prop": {
           "type": "integer"
         },
+        "a:b:c": {
+          "type": "object",
+          "properties": {
+            "d:e:f": {
+              "type": "object",
+              "properties": {
+                "e:g:h": {
+                  "type": "string"
+                }
+              },
+              "required": ["e:g:h"]
+            }
+          },
+          "required": ["d:e:f"]
+        },
         "a:b:prop": {
           "type": "string"
         },
@@ -26,7 +41,8 @@
       "required": [
         "a:prop",
         "b:prop",
-        "c:prop"
+        "c:prop",
+        "a:b:c"
       ]
     }
   }
