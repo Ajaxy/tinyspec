@@ -4,9 +4,10 @@ MyModel1 {
     c:prop: i,
     a:b:c: {
         d:e:f: {
-            e:g:h: s
+            g:h:i: s
         }
     },
+    a:b:d: !{e:f: s},
     a:b:prop?: s,
     a:c:prop?: string,
     a:d:prop?: d,

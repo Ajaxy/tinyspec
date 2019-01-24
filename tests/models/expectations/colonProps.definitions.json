@@ -18,14 +18,30 @@
             "d:e:f": {
               "type": "object",
               "properties": {
-                "e:g:h": {
+                "g:h:i": {
                   "type": "string"
                 }
               },
-              "required": ["e:g:h"]
+              "required": [
+                "g:h:i"
+              ]
             }
           },
-          "required": ["d:e:f"]
+          "required": [
+            "d:e:f"
+          ]
+        },
+        "a:b:d": {
+          "type": "object",
+          "properties": {
+            "e:f": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "e:f"
+          ],
+          "additionalProperties": false
         },
         "a:b:prop": {
           "type": "string"
@@ -42,7 +58,8 @@
         "a:prop",
         "b:prop",
         "c:prop",
-        "a:b:c"
+        "a:b:c",
+        "a:b:d"
       ]
     }
   }
