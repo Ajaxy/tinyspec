@@ -23,7 +23,7 @@ const parseProject = require('./lib/parseProject');
 const TARGET_YAML_FILE = 'openapi.yaml';
 const TARGET_JSON_FILE = 'openapi.json';
 
-const srcDir = process.cwd();
+const srcDir = argv.src || argv.s || process.cwd();
 const outputDir = argv.output || argv.o || '.';
 
 let mode = 'help';
