@@ -23,7 +23,7 @@ const parseProject = require('./lib/parseProject');
 const TARGET_YAML_FILE = 'openapi.yaml';
 const TARGET_JSON_FILE = 'openapi.json';
 
-const srcDir = process.cwd();
+const srcDir = argv.src || argv.s || process.cwd();
 const outputDir = argv.output || argv.o || '.';
 
 let mode = 'help';
@@ -79,7 +79,8 @@ Options:
     --yaml | -y     Generate OpenAPI/Swagger YAML
     --json | -j     Generate OpenAPI/Swagger JSON
     --html | -h     Generate HTML/CSS document
-    --output | -o    Path to place generated files
+    --src | -s      Path to sources directory, defaults to current directory
+    --output | -o   Path to place generated files
     --add-nulls     Include \`null\` as possible value for non-required fields
     --help          Display this help
 `,
