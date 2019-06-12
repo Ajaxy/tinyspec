@@ -12,6 +12,7 @@ const tests = [
   'Nested objects',
   'Model in query',
   'Path params',
+  'Hyphens'
 ];
 
 describe('Endpoints to OpenAPI paths', () => {

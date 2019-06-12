@@ -1,0 +1,97 @@
+{
+  "paths": {
+    "/my-endpoint": {
+      "get": {
+        "summary": "GET /my-endpoint",
+        "description": "GET /my-endpoint",
+        "operationId": "GET--my-endpoint",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/my-endpoint/second-part": {
+      "get": {
+        "summary": "GET /my-endpoint/second-part",
+        "description": "GET /my-endpoint/second-part",
+        "operationId": "GET--my-endpoint--second-part",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/myendpoint/second-part": {
+      "get": {
+        "summary": "GET /myendpoint/second-part",
+        "description": "GET /myendpoint/second-part",
+        "operationId": "GET--myendpoint--second-part",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/my-endpoint/second-part/x:y": {
+      "get": {
+        "summary": "GET /my-endpoint/second-part/x:y",
+        "description": "GET /my-endpoint/second-part/x:y",
+        "operationId": "GET--my-endpoint--second-part--x--y",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "success"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

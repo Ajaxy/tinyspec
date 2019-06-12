@@ -1,0 +1,11 @@
+GET /my-endpoint
+    => {success: b}
+
+GET /my-endpoint/second-part
+    => {success: b}
+
+GET /myendpoint/second-part
+    => {success: b}
+
+GET /my-endpoint/second-part/x:y
+    => {success: b}
