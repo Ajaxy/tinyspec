@@ -1,6 +1,6 @@
 {
   "name": "tinyspec",
-  "version": "2.4.5",
+  "version": "2.4.6",
   "description": "Simple syntax for describing REST APIs",
   "main": "index.js",
   "bin": {
