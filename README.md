@@ -25,14 +25,7 @@
 
 Tinyspec offers a lightweight and human-readable alternative to the more verbose [OpenAPI/Swagger](https://github.com/OAI/OpenAPI-Specification) format. It relies on the strengths of the OpenAPI format without the need to maintain the single large JSON or YAML file or to use some special software, instead allowing you to keep your API endpoints and models in separate and easy to maintain files.
 
-Possible outputs include a full OpenAPI specification in YAML and JSON formats, or the API documentation in HTML format created with the help of the [bootprint-openapi](https://github.com/bootprint/bootprint-openapi).
-
-
-## Installing
-To use `tinyspec`, install it globally. Use [npm](https://www.npmjs.com/) for it:
-```
-npm install -g tinyspec
-```
+Possible outputs include a full OpenAPI specification in YAML and JSON formats.
 
 ## Quick Start and Demo
 To generate the API documentation, follow these steps:
@@ -251,7 +244,6 @@ tinyspec [option]
 Options:
     --yaml | -y     Generate OpenAPI/Swagger YAML
     --json | -j     Generate OpenAPI/Swagger JSON
-    --html | -h     Generate HTML/CSS document
     --src | -s      Path to sources directory, defaults to current directory
     --output | -o   Path to place generated files
     --add-nulls     Include `null` as possible value for non-required fields
