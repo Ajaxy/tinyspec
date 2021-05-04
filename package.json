@@ -51,7 +51,7 @@
     "eslint-plugin-import": "^2.14.0",
     "husky": "^0.14.3",
     "jest": "^23.5.0",
-    "merge": "^1.2.1",
+    "merge": "^2.1.1",
     "swagger-parser": "^6.0.2"
   }
 }
