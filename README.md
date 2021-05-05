@@ -34,6 +34,10 @@ To use `tinyspec`, install it globally. Use [npm](https://www.npmjs.com/) for it
 npm install -g tinyspec
 ```
 
+For vscode users, install our vscode extension
+
+[https://marketplace.visualstudio.com/items?itemName=frolovdev.tinyspec-lang](https://marketplace.visualstudio.com/items?itemName=frolovdev.tinyspec-lang)
+
 ## Quick Start and Demo
 To generate the API documentation, follow these steps:
 
@@ -278,6 +282,9 @@ Check out [this repo](https://github.com/Ajaxy/openapi-asciidoctor) to produce e
 
 ### Tinyspec Cloud
 [Tinyspec Cloud](https://tinyspec.cloud) is a documentation hosting service with a themes marketplace launching soon.
+
+### Tinyspec vscode
+[Tinyspec vscode](https://marketplace.visualstudio.com/items?itemName=frolovdev.tinyspec-lang) is a vscode extensions that enhance your developer experience.
 
 ## OpenAPI version
 The current version of tinyspec produces Swagger/OpenAPI 2.0. The new 3.0 version has got some nice features there, but is not well supported by most third-party tools yet. The compatibility with OpenAPI 3.0 is to be added in future.
