@@ -108,6 +108,28 @@
         "a",
         "b"
       ]
+    },
+    "MyModel8": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "a"
+      ]
+    },
+    "MyModel9": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "a"
+      ]
     }
   }
 }

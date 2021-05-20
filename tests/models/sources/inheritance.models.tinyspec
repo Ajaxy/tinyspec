@@ -12,3 +12,7 @@ MyModel5 < MyModel3 {-a, b?}
 # Edge case: inheritance of a model with `!`
 MyModel6 !{a}
 MyModel7 < MyModel6 {b}
+
+# When parent modal is defined after child model
+MyModel8 < MyModel9
+MyModel9 {a}
