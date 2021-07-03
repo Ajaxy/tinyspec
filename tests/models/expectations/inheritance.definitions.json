@@ -130,6 +130,51 @@
       "required": [
         "a"
       ]
+    },
+    "MyModel10": {
+      "type": "object",
+      "properties": {
+        "c": {
+          "type": "string"
+        },
+        "b": {
+          "type": "string"
+        },
+        "a": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "c",
+        "b",
+        "a"
+      ]
+    },
+    "MyModel11": {
+      "type": "object",
+      "properties": {
+        "c": {
+          "type": "string"
+        },
+        "b": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "c",
+        "b"
+      ]
+    },
+    "MyModel12": {
+      "type": "object",
+      "properties": {
+        "c": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "c"
+      ]
     }
   }
 }
