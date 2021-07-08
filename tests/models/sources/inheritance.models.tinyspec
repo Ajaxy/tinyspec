@@ -16,3 +16,8 @@ MyModel7 < MyModel6 {b}
 # When parent modal is defined after child model
 MyModel8 < MyModel9
 MyModel9 {a}
+
+# Inheritance chain when parent modal is defined after child model
+MyModel10 < MyModel11 {a}
+MyModel11 < MyModel12 {b}
+MyModel12 {c}
