@@ -4,7 +4,7 @@
       "get": {
         "summary": "**List** _customKeys_",
         "description": "**List** _customKeys_",
-        "operationId": "GET--my1Resources",
+        "operationId": "listCustomKeys",
         "responses": {
           "200": {
             "description": "",
@@ -28,7 +28,7 @@
       "post": {
         "summary": "**Create** new _customKey_",
         "description": "**Create** new _customKey_",
-        "operationId": "POST--my1Resources",
+        "operationId": "createCustomKey",
         "responses": {
           "201": {
             "description": "",
@@ -69,7 +69,7 @@
       "get": {
         "summary": "**Retrieve** _customKey_",
         "description": "**Retrieve** _customKey_",
-        "operationId": "GET--my1Resources--id",
+        "operationId": "retrieveCustomKey",
         "responses": {
           "200": {
             "description": "",
@@ -98,7 +98,7 @@
       "patch": {
         "summary": "**Update** _customKey_",
         "description": "**Update** _customKey_",
-        "operationId": "PATCH--my1Resources--id",
+        "operationId": "updateCustomKey",
         "responses": {
           "200": {
             "description": "",
@@ -143,7 +143,7 @@
       "delete": {
         "summary": "**Delete** _customKey_",
         "description": "**Delete** _customKey_",
-        "operationId": "DELETE--my1Resources--id",
+        "operationId": "deleteCustomKey",
         "responses": {
           "200": {
             "description": "",
@@ -174,7 +174,7 @@
       "get": {
         "summary": "**List** _customKeys_",
         "description": "**List** _customKeys_",
-        "operationId": "GET--my2Resources",
+        "operationId": "listCustomKeys",
         "responses": {
           "200": {
             "description": "",
@@ -198,7 +198,7 @@
       "post": {
         "summary": "**Create** new _customKey_",
         "description": "**Create** new _customKey_",
-        "operationId": "POST--my2Resources",
+        "operationId": "createCustomKey",
         "responses": {
           "201": {
             "description": "",
@@ -239,7 +239,7 @@
       "get": {
         "summary": "**Retrieve** _customKey_",
         "description": "**Retrieve** _customKey_",
-        "operationId": "GET--my2Resources--id",
+        "operationId": "retrieveCustomKey",
         "responses": {
           "200": {
             "description": "",
@@ -268,7 +268,7 @@
       "patch": {
         "summary": "**Update** _customKey_",
         "description": "**Update** _customKey_",
-        "operationId": "PATCH--my2Resources--id",
+        "operationId": "updateCustomKey",
         "responses": {
           "200": {
             "description": "",
@@ -313,7 +313,7 @@
       "delete": {
         "summary": "**Delete** _customKey_",
         "description": "**Delete** _customKey_",
-        "operationId": "DELETE--my2Resources--id",
+        "operationId": "deleteCustomKey",
         "responses": {
           "200": {
             "description": "",
@@ -344,7 +344,7 @@
       "get": {
         "summary": "**List** _my3Resources_",
         "description": "**List** _my3Resources_",
-        "operationId": "GET--my3Resources",
+        "operationId": "listMy3Resources",
         "responses": {
           "200": {
             "description": "",
@@ -368,7 +368,7 @@
       "post": {
         "summary": "**Create** new _my3Resource_",
         "description": "**Create** new _my3Resource_",
-        "operationId": "POST--my3Resources",
+        "operationId": "createMy3Resource",
         "responses": {
           "201": {
             "description": "",
@@ -409,7 +409,7 @@
       "get": {
         "summary": "**Retrieve** _my3Resource_",
         "description": "**Retrieve** _my3Resource_",
-        "operationId": "GET--my3Resources--id",
+        "operationId": "retrieveMy3Resource",
         "responses": {
           "200": {
             "description": "",
@@ -438,7 +438,7 @@
       "patch": {
         "summary": "**Update** _my3Resource_",
         "description": "**Update** _my3Resource_",
-        "operationId": "PATCH--my3Resources--id",
+        "operationId": "updateMy3Resource",
         "responses": {
           "200": {
             "description": "",
@@ -483,7 +483,7 @@
       "delete": {
         "summary": "**Delete** _my3Resource_",
         "description": "**Delete** _my3Resource_",
-        "operationId": "DELETE--my3Resources--id",
+        "operationId": "deleteMy3Resource",
         "responses": {
           "200": {
             "description": "",
